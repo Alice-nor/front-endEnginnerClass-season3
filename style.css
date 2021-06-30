@@ -80,13 +80,14 @@ h1::after {
 }
 
 .link a:hover {
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 
 .link a:nth-child(1):hover,
 .link a:nth-child(2):hover,
 .link a:nth-child(3):hover {
-    background-color: #616161;
+    background-color: brown;
+    box-shadow: 5px 3px 0 rgba(0, 0, 0, 0.5);
 }
 
 .link a {
@@ -97,7 +98,7 @@ h1::after {
     margin: 5px 0;
     letter-spacing: 7px;
     font-weight: 500;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     transition: transform 0.3s ease-in, background-color 0.3s ease-in-out;
 }
 

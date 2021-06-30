@@ -135,6 +135,13 @@ strong {
     width: 100%;
 }
 
+
+/* 隱藏捲軸 */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 .text a {
     color: black;
     font-weight: 500;

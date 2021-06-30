@@ -6,4 +6,4 @@
 
 月份 | 日期 | Demo
 ---- |---- |----
-06  | 31  | [0630 - HTML5](https://alice-nor.github.io/JavaScript30/06%20-%20Type%20Ahead/index.html) 
+06  | 31  | [0630 - HTML5](https://alice-nor.github.io/front-endEnginnerClass-season3/0630%20-%20HTML5/index.html) 

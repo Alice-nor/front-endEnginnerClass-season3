@@ -149,7 +149,8 @@ strong {
 }
 
 .text p,
-ol li {
+ol li,
+ul li {
     line-height: 25px;
     font-family: 'Noto Sans TC', sans-serif;
     /* letter-spacing: 1px; */
@@ -157,8 +158,15 @@ ol li {
     font-weight: 300;
 }
 
-ol li {
+ol li,
+ul li {
     margin-left: 20px;
+}
+
+.text span {
+    text-decoration: underline;
+    font-weight: 500;
+    color: #b93737;
 }
 
 .date {
@@ -173,7 +181,7 @@ ol li {
     border-bottom: 3px double #000;
     letter-spacing: 5px;
     font-family: 'Kirang Haerang', cursive;
-    margin: 15px;
+    margin: 15px 0;
 }
 
 

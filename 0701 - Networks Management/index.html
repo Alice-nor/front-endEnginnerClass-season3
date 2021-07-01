@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's notes | frond-end Class</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="book">
+            <h1>Alice's<br>notes</h1>
+            <!-- 右邊標籤區 -->
+            <div class="link">
+                <!-- 六月的分頁 -->
+                <a href="#">六月</a>
+                <!-- 七月的分頁 -->
+                <a href="#">七月</a>
+                <!-- 八月的分頁 -->
+                <a href="#">八月</a>
+            </div>
+
+            <!-- 中央筆記區 -->
+            <div class="text">
+                <!-- 抄筆記 -->
+                <p class="date">2021/07/01 Networks Management</p>
+
+                <article>
+                    <h2 class="title">Basics of Web Design</h2>
+                    <p>網路設備：</p>
+                    <ul>
+                        <li>路由器</li>
+                        <li>交換器</li>
+                        <li>集線器</li>
+                        <li>無線AP</li>
+                    </ul>
+                    <p>fa0/1 表示 slot/number → 第 0 個插槽的第 1 個 port。</p>
+                    <br>
+                    <p><span>集線器（hub）</span>被當作終端的網路設備，但由於它傳輸效能差，因此目前很少在使用此種網路設備（是很不安全的傳送行為）。<span>共享匯流排（shared bus）</span>，可視為資料傳送的通道，只有一個通道，通道共享。每一台電腦可存取匯流排，這種特性稱為共同存取(multiple access)。</p>
+                    <br>
+                    <p>網路傳送資料有三種機制：</p>
+                    <ul>
+                        <li>單播傳送（unicast）：從來源端電腦只傳送資料給另一台電腦</li>
+                        <li>廣播傳送（broadcast）：從來源端電腦傳送給所有電腦</li>
+                        <li>群波傳送（multicast）：從來源端電腦傳送給選定的群組電腦</li>
+                    </ul>
+                    <p>最常使用的是單播傳送，接著是廣播傳送，群播傳送很少使用。</p>
+                    <br>
+                    <p>集線器會有資料碰撞（collision）的問題，由於集線器上的資料匯流排（通道）是共用的，當有資料在集線器上傳送，此時又有其他 PC 往集線器送資料時，這時會有碰撞產生。</p>
+                    <p>碰撞分為 Early collision 與 Late collisions，在傳送資料少於 512 bits 才發生碰撞稱為 Early collision ,大於 512 bits發生碰撞稱為 Late collisions。</p>
+                    <br>
+                    <p><span>CSMA / CD</span></p>
+                    <p>CSMA - 是防止碰撞機制，PC4 要送出資料之前，要先用 CS 偵測到已經有資料在匯流排上傳遞，PC4 就先暫時不送出資料。 CD - 是偵測碰撞的機制，當碰撞快要發生前，會發出一個 JAM 的訊號（清空）。後退演算法會將兩台電腦下次送出的時間錯開。
+                    </p>
+                    <br>
+                    <p>交換器（switch）的前身為橋接器（bridge），一般橋接器有兩個 port，這兩個 port 切割兩個碰撞區域。</p>
+                    <p>Mac table 作用 - 使用交換器可以做到資料只傳資料給一台電腦，這樣的傳送機制有效率而且安全，而 mac table 就是協助達成指傳送資料給目的電腦的機制。</p>
+                    <p>一開始 mac table 是空的，交換器會維護電腦 mac 紀錄與對應的 port。</p>
+                    <br>
+                    <p>下面是 packet tracer 的截圖。隔了很久又再碰了這個軟體了。（正在試 mac table）</p>
+                    <img src="../img/0701.png" alt="packet tracer">
+                </article>
+
+                <article>
+                    <h2 class="title">Summary</h2>
+                    <p>今天有點小感觸.....。從今年一月開始自學到現在，雖然也不會感到孤單（因為太多東西要吸收了，看 fb 前端社團只覺得離他們好遠，看了只更焦慮，沒感到孤單），但終究是只有我一個人在往前的感覺，身邊沒有人一起前行，因為我身邊並沒有一起研究前端的人.....。</p>
+                    <br>
+                    <p>而我這次竟然感受到一點了！雖然大家都還是新手的感覺，我反而是偶爾會冒出來幫忙解決問題的人，但我感覺到為什麼很多前端訓練班的人會說，有人跟著一起奮鬥往前與研究的美好。覺得有點小感動，希望我也可以跟著他們一起往前成長！好嚮往大家一起研究前端，擁有一起探討小問題與大問題的夥伴！期待！</p>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Copyright 2021 Alice 學習筆記
+    </footer>
+</body>
+
+</html>

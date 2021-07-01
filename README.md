@@ -7,3 +7,5 @@
 月份 | 日期 | Demo
 ---- |---- |----
 06  | 31  | [0630 - HTML5](https://alice-nor.github.io/front-endEnginnerClass-season3/0630%20-%20HTML5/index.html) 
+---- |---- |----
+07  | 01  | [0701 - Networks Management](https://alice-nor.github.io/front-endEnginnerClass-season3/0701%20-%20Networks%20Management/index.html) 

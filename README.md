@@ -3,6 +3,8 @@
 
   一開始朋友分享這個上課資訊，我看到課程內容很感興趣，我想學更深入的 JavaScript、jQuery、React、網頁後端等等，所以就報名了。今天（6/30）老師希望我們做小網站當作筆記，因此我乾脆開一個 github 放我的每日上課練習。會包括一些前期很簡單很基礎的內容，也當作給我的複習吧！
 
+首頁請看：[Alice's notes | frond-end Class](https://alice-nor.github.io/front-endEnginnerClass-season3/index.html)
+
 
 月份 | 日期 | Demo
 ---- |---- |----

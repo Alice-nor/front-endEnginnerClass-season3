@@ -11,10 +11,7 @@ body {
 }
 
 
-/* 首頁 */
-
-
-/* 分頁 */
+/* 共有 */
 
 body {
     height: 100%;
@@ -23,7 +20,7 @@ body {
 
 .container {
     width: 100%;
-    margin-top: 5%;
+    margin-top: 3%;
     /* border: 3px solid green; */
     display: flex;
     justify-content: center;
@@ -38,30 +35,6 @@ body {
     box-shadow: 2px 2px 0 rgba(2, 0, 0, 0.27), 5px 5px 0 rgba(2, 0, 0, 0.27), 8px 8px 0 rgba(2, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
     /* flex */
     display: flex;
-    justify-content: flex-end;
-}
-
-
-/* 書裡的標題區 */
-
-h1 {
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    /* border: 2px solid red; */
-    color: #443b2e;
-    font-family: 'Kirang Haerang', cursive;
-    font-size: 4em;
-}
-
-h1::after {
-    content: '';
-    width: 100%;
-    height: 15px;
-    background-color: rgba(255, 228, 196, .8);
-    position: absolute;
-    left: 0;
-    bottom: 0;
 }
 
 
@@ -115,17 +88,17 @@ h1::after {
 }
 
 
-/* 書中筆記區 */
+/* 隱藏捲軸 */
 
-strong {
-    letter-spacing: 5px;
-    color: navy;
-    margin: 10px 0;
+::-webkit-scrollbar {
+    display: none;
 }
 
+
+/* 書中文字 */
+
 .text {
-    width: 75%;
-    padding: 30px;
+    width: 80%;
     box-sizing: border-box;
     overflow: auto;
 }
@@ -134,13 +107,6 @@ strong {
     padding: 20px;
     box-sizing: border-box;
     width: 100%;
-}
-
-
-/* 隱藏捲軸 */
-
-::-webkit-scrollbar {
-    display: none;
 }
 
 .text a {
@@ -194,18 +160,147 @@ footer {
     color: #909090;
 }
 
+
+/* 首頁 */
+
+.index.book {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/* 書裡的標題區 */
+
+.index.book h1 {
+    position: unset;
+    font-family: 'Kirang Haerang', cursive;
+    font-size: 6em;
+    padding: 0;
+}
+
+.index.book h1 a {
+    color: #443b2e;
+    text-decoration: none;
+}
+
+.index.book h1::after {
+    display: none;
+}
+
+.index .text {
+    width: 75%;
+    padding: 0px 30px;
+}
+
+
+/* DEMO */
+
+.demo {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+table {
+    width: 400px;
+    border-collapse: collapse;
+}
+
+table,
+td a {
+    /* 字型 */
+    line-height: 25px;
+    font-family: 'Noto Sans TC', sans-serif;
+    /* letter-spacing: 1px; */
+    font-size: 1em;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+thead {
+    background-color: #ffead1;
+}
+
+table,
+th,
+td {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+th,
+td {
+    padding: 10px 0;
+}
+
+figure {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.demo figure img {
+    width: 80%;
+    height: auto;
+}
+
+.demo figure figcaption {
+    line-height: 25px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+
+/* 分頁 */
+
+.book {
+    justify-content: flex-end;
+}
+
+.book h1 a {
+    color: #443b2e;
+    text-decoration: none;
+}
+
+
+/* 書裡的標題區 */
+
+h1 {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    /* border: 2px solid red; */
+    color: #443b2e;
+    font-family: 'Kirang Haerang', cursive;
+    font-size: 4em;
+}
+
+h1::after {
+    content: '';
+    width: 100%;
+    height: 15px;
+    background-color: rgba(255, 228, 196, .8);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
+/* 書中文字 */
+
+.text {
+    width: 75%;
+    padding: 30px;
+}
+
 @media (max-width:1024px) {
     h1 {
         font-size: 3em;
     }
 }
-
-
-/* @media (max-width:2560px) {
-    .book {
-        width: 50%;
-    }
-    h1 {
-        font-size: 6em;
-    }
-} */

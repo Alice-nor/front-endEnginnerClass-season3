@@ -5,6 +5,7 @@
 
 首頁請看：[Alice's notes | frond-end Class](https://alice-nor.github.io/front-endEnginnerClass-season3/index.html)
 
+![image](https://github.com/Alice-nor/front-endEnginnerClass-season3/blob/main/img/indexPic.png)
 
 月份 | 日期 | Demo
 ---- |---- |----

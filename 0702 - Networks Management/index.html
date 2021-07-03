@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's notes | frond-end Class</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="book">
+            <h1 class="h1"><a href="../index.html">Alice's<br>notes</a></h1>
+            <!-- 右邊標籤區 -->
+            <div class="link">
+                <!-- 六月的分頁 -->
+                <a href="../indexJune.html">六月</a>
+                <!-- 七月的分頁 -->
+                <a href="../indexJuly.html">七月</a>
+                <!-- 八月的分頁 -->
+                <a href="../indexAug.html">八月</a>
+            </div>
+
+            <!-- 中央筆記區 -->
+            <div class="text">
+                <!-- 抄筆記 -->
+                <p class="date">2021/07/01 Networks Management</p>
+
+                <article>
+                    <h2 class="title">Basics of Web Design</h2>
+                    <p>交換器的雙工（Duplex）</p>
+                    <ul>
+                        <li>全雙工表示同一時間可以送出資料也可以接收資料，而不會產生碰撞（switch，也可轉成半雙工）</li>
+                        <li>半雙工表示同一時間只能送出資料或接收資料，並且會有碰撞（hub）</li>
+                    </ul>
+                    <br>
+                    <p>交換器轉送方法：</p>
+                    <ul>
+                        <li>儲存轉送（store-and-forward） - 較可靠，但速度慢。交換器收到資料時會將資料存在緩衝區（RAM），直到確認資料訊框的完整性再送往目的地。</li>
+                        <li>截穿交換（cut-through） - 比較快，但資料沒有檢查。在收到資料資料訊框時立即處理資料,交換器不執行任何錯誤檢查。</li>
+                    </ul>
+                    <p>某些交換器可設定為連接埠先執行截穿交換,當達到使用者定義的錯誤比例門檻（10%）時,這些連接埠自動切換為儲存轉送,當錯誤率低於該門檻時,連接埠自動恢復到截穿交換。</p>
+                    <br>
+                    <p>fragment-free 模式</p>
+                    <ul>
+                        <li>在此模式下交換器會先讀取 Frame 的前 64 個 bytes 並做檢查</li>
+                        <li>前 64 個 bytes 有錯誤,交換器將會把 Frame 丟棄</li>
+                        <li>Fragment-Free 就兼具 store-and-forward 和 cut-though 的優點。</li>
+                    </ul>
+                    <br>
+                    <p>廣播資料(Broadcast Message)</p>
+                    <ul>
+                        <li>廣播資料就是要將資料送給所有電腦（不做 mac 檢查）</li>
+                        <li>交換器、集線器接收到廣播資料就會轉送所有電腦</li>
+                        <li>若用廣播資料傳送病毒，所有電腦都會收到</li>
+                        <li>理解路由器 Router 前要先理解廣播資料</li>
+                    </ul>
+                    <br>
+                    <p>不同廣播區域：</p>
+                    <ul>
+                        <li>不同廣播區域下的電腦是無法接收到對方送出的廣播資料</li>
+                        <li>若將交換器與集線器串接，只有一個廣播區域</li>
+                        <li>不管串接多少台 swich 或 hub，都屬於同一個廣播區域，所以 switch 與 hub 都無法阻擋廣播資料</li>
+                    </ul>
+                    <br>
+                    <p>路由器（router）</p>
+                    <ul>
+                        <li>有阻擋廣播資料的功能</li>
+                        <li>有切割廣播區域的功能</li>
+                        <li>主要設計不是用來接電腦，是用來切割與規劃網路</li>
+                        <li>廣播區域當作一個網路區域或簡稱網路，廣播區域 = 網路區域</li>
+                        <li>只有路由器才能將網路區域連接起來，連接起來的網路稱為互聯網（inter network / internet）</li>
+                        <li>要劃分網路區其主要目的是要定位電腦的所在位置，因此要找某一台電腦，要先判斷此電腦在哪一個網路區域下</li>
+                    </ul>
+                    <br>
+                    <p>網路區域編號（ip）</p>
+                    <ul>
+                        <li>前三碼為區域編號，後一碼為電腦編號（ex:192.168.10.0）</li>
+                        <li>每個網路區域需要一個編號，編號有一定格式稱為 ip</li>
+                        <li>網路區域的實際地理位置，規劃網路的人員知道</li>
+                    </ul>
+                    <p>路由器為路由表來作為繞送查詢使用。 路由表主要內容是網路區域 ip 的位址對應 port（switch 則是在 mac table 的 mac 位址對應到 port）</p>
+
+
+
+                    <br>
+                    <p>應用層，常見到的應用層協定有：</p>
+                    <ol>
+                        <li>網域名稱服務協定 DNS：用於網際網路網域名稱解析（domain.name）</li>
+                        <li>超文字傳輸協定 HTTP / HTTPS（加密）：用於傳輸組成全球資訊網網頁（www）的檔案</li>
+                        <li>檔案傳輸協定 FTP：用於在系統之間相互傳輸檔案</li>
+                        <li>檔案傳輸協定 TFTP：簡易版的 FTP，不需登入帳號</li>
+                    </ol>
+
+                    <br>
+                    <p>應用協定的編號：每種應用層協定都會有一個編號，編號稱為 port no.。以下為範例 port no.</p>
+                    <ul>
+                        <li>DNS / 53</li>
+                        <li>HTTP / 80</li>
+                        <li>HTTPs / 443</li>
+                        <li>遠端登入協定 Telnet / 23</li>
+                        <li>簡易檔案傳輸協定 TFTP / 69</li>
+                    </ul>
+
+                </article>
+
+                <article>
+                    <h2 class="title">Summary</h2>
+                    <p>今天都在說比較底層的東西，難免比較枯燥 Q_Q，不過可以理解路由器在做什麼還蠻好的，畢竟之前一直看到關於 router 的文章，關於畫面呈現背後有哪些行為與動作等等.....。</p>
+                    <br>
+                    <p>然後很尷尬的是，下午上課有差不多7-8分鐘？不知道為什麼我的 mic 突然開了！我那時候還聽了一點很 high 韓文歌囧，結果就有同學私訊我說我 mic 沒關，有夠尷尬.....。</p>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Copyright 2021 Alice 學習筆記
+    </footer>
+</body>
+
+</html>

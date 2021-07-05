@@ -7,10 +7,11 @@
 
 ![image](https://github.com/Alice-nor/front-endEnginnerClass-season3/blob/main/img/indexPic.png)
 
-月份 | 日期 | Demo
+月份 | 日期 | Demo | 簡要內容
+---- |---- |---- |----
+06  | 31  | [HTML5](https://alice-nor.github.io/front-endEnginnerClass-season3/0630%20-%20HTML5/index.html)   | HTML5 結構
 ---- |---- |----
-06  | 31  | [0630 - HTML5](https://alice-nor.github.io/front-endEnginnerClass-season3/0630%20-%20HTML5/index.html) 
----- |---- |----
-07  | 01  | [0701 - Networks Management](https://alice-nor.github.io/front-endEnginnerClass-season3/0701%20-%20Networks%20Management/index.html) 
-07  | 02  | [0702 - Networks Management](https://alice-nor.github.io/front-endEnginnerClass-season3/0702%20-%20Networks%20Management/index.html) 
+07  | 01  | [Networks Management](https://alice-nor.github.io/front-endEnginnerClass-season3/0701%20-%20Networks%20Management/index.html)    | 網路傳送、CSMA/CD...
+07  | 02  | [Networks Management](https://alice-nor.github.io/front-endEnginnerClass-season3/0702%20-%20Networks%20Management/index.html)     | 廣播傳送、路由器、ip、網路七層架構...
+07  | 05  | [Web front-end development](https://alice-nor.github.io/front-endEnginnerClass-season3/0702%20-%20Networks%20Management/index.html)     | Node.js、module、網路頁面導向（server、router）....
 

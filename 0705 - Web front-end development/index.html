@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's notes | frond-end Class</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="book">
+            <h1 class="h1"><a href="../index.html">Alice's<br>notes</a></h1>
+            <!-- 右邊標籤區 -->
+            <div class="link">
+                <!-- 六月的分頁 -->
+                <a href="../indexJune.html">六月</a>
+                <!-- 七月的分頁 -->
+                <a href="../indexJuly.html">七月</a>
+                <!-- 八月的分頁 -->
+                <a href="../indexAug.html">八月</a>
+            </div>
+
+            <!-- 中央筆記區 -->
+            <div class="text">
+                <!-- 抄筆記 -->
+                <p class="date">2021/07/05 Web front-end development</p>
+
+                <article>
+                    <h2 class="title">Node.js</h2>
+                    <p><span>module.exports</span> = ‘Hello World”;</p>
+                    <p>module 代表這個模組， exports 代表進入這個模組所提供的服務。引用模組時，使用 require。require 為 node.js 的指令。（寫 module.exports 或 exports 都可以）</p>
+                    <img src="../img/0705-1.png">
+                    <img src="../img/0705-2.png">
+                    <br>
+                    <p>下面是 module 方法的使用方式：</p>
+                    <img src="../img/0705-3.png">
+                    <p>搞了好久想說怎麼一直不行，原來我儲存的檔案不是我 run 的檔案 RRRR.....心累，頭暈。</p>
+                    <img src="../img/0705-4.png">
+                    <br>
+                    <p>web 伺服器（web server）</p>
+                    <ol>
+                        <li>接受使用者端的請求（request, 網頁路徑）</li>
+                        <li>根據請求回應（response）=> 產生網頁 = 網頁標題（header）+ 網頁的內容（html+css+JS）</li>
+                    </ol>
+                    <p>index.js => server.js（接收 request，透過 response 產生網頁。經由參數傳遞路由處理函數 ---> router.js 處理路徑）</p>
+                </article>
+
+                <article>
+                    <h2 class="title">modules 模塊</h2>
+                    <p>我第一次使用這個方法，一查之下發現很好使用，所以想記錄看到的文章與學習到的內容。在上課時看到這篇文章 - <a href="https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part4/module_system.html">《模組系統》</a> 使用模組有三個重點：</p>
+
+                    <ul>
+                        <li>ES6的模組程式碼會自動變成 <span>strict-mode（嚴格模式）</span> ，不論你有沒有使用"use strict"在程式碼中。</li>
+                        <li>ES6的模組是<span>一個檔案一個模組</span></li>
+                        <li>FES6模組使用 export（輸出）與 import（輸入）語句來進行模組輸出與輸入。<span>輸出通常位於檔案最後，輸入位於最前面</span>。</li>
+                    </ul>
+                    <br>
+                    <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules">《MDN JavaScript modules 模板》</a><span>推薦閱讀！</span></p>
+                    <p>使用 .js 擴展名的模塊文件，但在其它一些文章中，你可能會看到 .mjs 擴展名的使用。V8推薦了這樣的做法，比如有下列理由（但作者還是建議使用.js）：</p>
+                    <ul>
+                        <li>比較清晰，這可以指出哪些文件是模塊，哪些是常規的 JavaScript。</li>
+                        <li>這能保證你的模塊可以被運行時環境和構建工具識別，比如 Node.js 和 Babel。</li>
+                    </ul>
+                    <p>為了獲得模塊的功能要做的第一件事是把它們導出來。使用 export 語句來完成。最簡單的方法是把它（指 export 語句）放到你想要導出的項前面。export 要放在最外層，<span>不能夠在函數內使用 export </span>。</p><br>
+                    <p>一個更方便的方法導出所有你想要導出的模塊的方法是在模塊文件的末尾使用一個export 語句，語句是用花括號括起來的用逗號分割的列表。如下：</p>
+                    <textarea readonly class="code">example: export { name, draw, reportArea, reportPerimeter };</textarea><br>
+                    <p>把模塊應用到 HTML 時，需要把 type="module" 放到 script 標籤中</p>
+                    <textarea readonly class="code"><script type="module" src="main.mjs"></script></textarea>
+                    <p>你只能在模塊內部使用 import 和export 語句 ；不是普通腳本文件。</p>
+                </article>
+
+                <article>
+                    <h2 class="title">Summary</h2>
+                    <p>今天都在說比較底層的東西，難免比較枯燥 Q_Q，不過可以理解路由器在做什麼還蠻好的，畢竟之前一直看到關於 router 的文章，關於畫面呈現背後有哪些行為與動作等等.....。</p>
+                    <br>
+                    <p>然後很尷尬的是，下午上課有差不多7-8分鐘？不知道為什麼我的 mic 突然開了！我那時候還聽了一點很 high 韓文歌囧，結果就有同學私訊我說我 mic 沒關，有夠尷尬.....。</p>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Copyright 2021 Alice 學習筆記
+    </footer>
+</body>
+
+</html>

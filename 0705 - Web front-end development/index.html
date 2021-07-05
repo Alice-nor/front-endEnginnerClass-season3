@@ -37,6 +37,7 @@
                     <img src="../img/0705-1.png">
                     <img src="../img/0705-2.png">
                     <br>
+
                     <p>下面是 module 方法的使用方式：</p>
                     <img src="../img/0705-3.png">
                     <p>搞了好久想說怎麼一直不行，原來我儲存的檔案不是我 run 的檔案 RRRR.....心累，頭暈。</p>
@@ -50,35 +51,44 @@
                     <p>index.js => server.js（接收 request，透過 response 產生網頁。經由參數傳遞路由處理函數 ---> router.js 處理路徑）</p>
                 </article>
 
+
+
                 <article>
-                    <h2 class="title">modules 模塊</h2>
+                    <h2 class="title">modules 模組</h2>
                     <p>我第一次使用這個方法，一查之下發現很好使用，所以想記錄看到的文章與學習到的內容。在上課時看到這篇文章 - <a href="https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part4/module_system.html">《模組系統》</a> 使用模組有三個重點：</p>
 
                     <ul>
                         <li>ES6的模組程式碼會自動變成 <span>strict-mode（嚴格模式）</span> ，不論你有沒有使用"use strict"在程式碼中。</li>
                         <li>ES6的模組是<span>一個檔案一個模組</span></li>
                         <li>FES6模組使用 export（輸出）與 import（輸入）語句來進行模組輸出與輸入。<span>輸出通常位於檔案最後，輸入位於最前面</span>。</li>
-                    </ul>
-                    <br>
-                    <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules">《MDN JavaScript modules 模板》</a><span>推薦閱讀！</span></p>
-                    <p>使用 .js 擴展名的模塊文件，但在其它一些文章中，你可能會看到 .mjs 擴展名的使用。V8推薦了這樣的做法，比如有下列理由（但作者還是建議使用.js）：</p>
+                    </ul><br>
+
+                    <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules">《MDN JavaScript modules 模板》</a><span> 推薦閱讀！</span></p>
+                    <p>使用 .js 擴展名的模組文件，但在其它一些文章中，你可能會看到 .mjs 擴展名的使用。V8推薦了這樣的做法，比如有下列理由（但作者還是建議使用.js）：</p>
                     <ul>
-                        <li>比較清晰，這可以指出哪些文件是模塊，哪些是常規的 JavaScript。</li>
-                        <li>這能保證你的模塊可以被運行時環境和構建工具識別，比如 Node.js 和 Babel。</li>
+                        <li>比較清晰，這可以指出哪些文件是模組，哪些是常規的 JavaScript。</li>
+                        <li>這能保證你的模組可以被運行時環境和構建工具識別，比如 Node.js 和 Babel。</li>
                     </ul>
-                    <p>為了獲得模塊的功能要做的第一件事是把它們導出來。使用 export 語句來完成。最簡單的方法是把它（指 export 語句）放到你想要導出的項前面。export 要放在最外層，<span>不能夠在函數內使用 export </span>。</p><br>
-                    <p>一個更方便的方法導出所有你想要導出的模塊的方法是在模塊文件的末尾使用一個export 語句，語句是用花括號括起來的用逗號分割的列表。如下：</p>
+                    <p>為了獲得模組的功能要做的第一件事是把它們導出來。使用 export 語句來完成。最簡單的方法是把它（指 export 語句）放到你想要導出的項前面。export 要放在最外層，<span>不能夠在函數內使用 export </span>。</p><br>
+                    <p>一個更方便的方法導出所有你想要導出的模組的方法是在模組文件的末尾使用一個export 語句，語句是用花括號括起來的用逗號分割的列表。如下：</p>
                     <textarea readonly class="code">example: export { name, draw, reportArea, reportPerimeter };</textarea><br>
-                    <p>把模塊應用到 HTML 時，需要把 type="module" 放到 script 標籤中</p>
+                    <p>把模組應用到 HTML 時，需要把 type="module" 放到 script 標籤中</p>
                     <textarea readonly class="code"><script type="module" src="main.mjs"></script></textarea>
-                    <p>你只能在模塊內部使用 import 和export 語句 ；不是普通腳本文件。</p>
+                    <p>你只能在模組內部使用 import 和export 語句 ；不是普通腳本文件。</p><br>
+
+
+                    <p><a href="https://zh-tw.coderbridge.com/series/e6ca520d20de4f8497e17d1a8d95245f/posts/3e54e13bb54d4aa788c6b6e029e72c18">《Day 16 - 了解 JavaScript Module》</a><span> 這篇也推薦閱讀，易懂好吸收！</span></p>
+                    <p>畫重點如下：</p>
+                    <ul>
+                        <li>一個檔案僅能有唯一的 default export，export 時以 default export 的 component 不用給予特定名稱，且在 import 時可以設任何的名字來使用。</li>
+                        <li>同個檔案可以 named export 多個 component，export 和 import 時要以同樣的名字進行（import 後可 renamed），在 import 時要以 { } 包住。</li>
+                        <li>default export 在 import 時不用 { } 以同樣名字 import。</li>
+                    </ul>
                 </article>
 
                 <article>
                     <h2 class="title">Summary</h2>
-                    <p>今天都在說比較底層的東西，難免比較枯燥 Q_Q，不過可以理解路由器在做什麼還蠻好的，畢竟之前一直看到關於 router 的文章，關於畫面呈現背後有哪些行為與動作等等.....。</p>
-                    <br>
-                    <p>然後很尷尬的是，下午上課有差不多7-8分鐘？不知道為什麼我的 mic 突然開了！我那時候還聽了一點很 high 韓文歌囧，結果就有同學私訊我說我 mic 沒關，有夠尷尬.....。</p>
+                    <p>我對 node.js 很不熟，今天學到了很多！沒想到還有 modules 這樣的東西，當然也就不知道 require、export....這些東西。雖然今天上的課有些還不是很懂，但很高興我知道有哪些方向要繼續去探詢！要努力鑽研 node.js 了！好多需要知道的 modules，突然間湧起了好多幹勁！</p>
                 </article>
 
 

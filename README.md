@@ -7,7 +7,11 @@
 
 ![image](https://github.com/Alice-nor/front-endEnginnerClass-season3/blob/main/img/indexPic.png)
 
-統整我閱讀到的，關於 PHP 之推薦閱讀網站 - 官方網站：[PHP: Hypertext Preprocessor](https://www.php.net/) ，適合 PHP 初學者：[歡迎來到 Jollen 的網站 :: PHP](https://www.jollen.org/php/) 
+統整我閱讀到的，關於 PHP 之推薦閱讀網站 - 
+
+官方網站：[PHP: Hypertext Preprocessor](https://www.php.net/) 
+
+適合 PHP 初學者：[歡迎來到 Jollen 的網站 :: PHP](https://www.jollen.org/php/) 
 
 月份 | 日期 | Demo | 簡要內容
 ---- |---- |---- |----

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's notes | frond-end Class</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="book">
+            <h1 class="h1"><a href="../index.html">Alice's<br>notes</a></h1>
+            <!-- 右邊標籤區 -->
+            <div class="link">
+                <!-- 六月的分頁 -->
+                <a href="../indexJune.html">六月</a>
+                <!-- 七月的分頁 -->
+                <a href="../indexJuly.html">七月</a>
+                <!-- 八月的分頁 -->
+                <a href="../indexAug.html">八月</a>
+            </div>
+
+            <!-- 中央筆記區 -->
+            <div class="text">
+                <!-- 抄筆記 -->
+                <p class="date">2021/07/06 PHP Network database</p>
+
+                <article>
+                    <h2 class="title">PHP</h2>
+                    <p>今天主要在練習 php 語法，第一次使用還蠻上手的，php 很好理解，只要去習慣它的語法。以下是我紀錄重點。</p>
+                    <ul>
+                        <li>&#060;?php …… ?&#062; → PHP 開始與結束</li>
+                        <li>php 程式碼太長時，為了方便觀看，可以使用 . 去連接兩段在程式碼看來分離，但呈現時會相連的文字。</li>
+                        <li>$username = &$stdName → 右邊的變數位子，給予到左邊的變數（& 代表 $stdName 此變數的位置）
+                            <ul>
+                                <li>$userName = <span>$stdName</span>（ <span>傳值不傳址</span> ）</li>
+                                <li>$userName = <span>&$stdName</span> （ <span>傳址不傳值</span>，一邊更改數值，另一個變數也會跟著更改）</li>
+                            </ul>
+                        </li>
+                        <li>echo() 和 print() 可輸出內容（可用括弧也可省略括弧）</li>
+                        <li>字串的串接用 .</li>
+                        <li>常數變數使用 <span>define()</span>，例如 define(‘PI’,3.14);</li>
+                        <li>boolean 不分大小寫</li>
+                        <li>太空船運算子，&#060;=&#062;，相等回傳 0 ，左邊大回傳 1，右邊大回傳 -1</li>
+                        <li>xor 運算式，兩個有一為真則為真，若同為 true 或 false，則回傳 false。記法：<span>相同為 false，不相同為 true</span></li>
+                        <li>php 提供的錯誤控制運算子，在函式或運算式前使用 @ 來控制程式錯誤，避免在網頁上顯示 php 錯誤訊息</li>
+                        <li>gettype 可取得變數的變數類型</li><br>
+                </article>
+
+
+
+
+
+                <article>
+                    <h2 class="title">PHP 的建議命名</h2>
+                    <p>一查之下發現 php 的建議命名也與我之前學過的 JS 有點不太一樣。</p>
+                    <p>建議閱讀：<a href="https://codeigniter.org.tw/userguide3/general/styleguide.html">PHP 風格指南</a> 以及<a href="https://www.ichiayi.com/tech/mantis_coding">php 程式碼撰寫標準規則</a> ，在此記下一些我目前看得懂的重點：</p><br>
+                    <p>變數命名規則 - </p>
+                    <ul>
+                        <li>變數名稱完全採用小寫英文字母</li>
+                        <li>字與字之間使用 _ 來連接，例如 $green_color_value</li>
+                        <li>迴圈變數通常使用: $i、 $j、 $k、 …等等</li>
+                        <li><span>不應使用駝峰風格</span></li>
+                    </ul>
+                    <p>常數命名規則 - </p>
+                    <ul>
+                        <li>常數名稱完全採用大寫英文字母</li>
+                        <li>字與字之間使用 _ 來連接，例如 ROOT_PATH</li>
+                    </ul>
+                    <p>函數命名規則 - </p>
+                    <ul>
+                        <li>函式名稱完全採用小寫英文字母.</li>
+                        <li>字與字之間使用 _ 來連接，例如 setup_page_breaks()</li>
+                    </ul>
+                    <p>註解 - </p>
+                    <ul>
+                        <li>以 # 這個符號來當註解開頭， 而不是 //</li>
+                        <li>使用 /* */ 來標註整個註解區塊，一般而言，這只用在開發過程</li>
+                        <li>使用 @ 來標示簡短的訊息, 這樣可以留下讓程式碼中可以改善想法。所以應該在 @ 後面先接著自己的姓名或代號然後才是訊息內容。
+                        </li>
+                    </ul>
+                    <p>boolean 命名規則 - </p>
+                    <ul>
+                        <li>TRUE, FALSE, 以及 NULL 關鍵字應該<span>永遠使用大寫字母</span>。</li>
+                    </ul>
+                    <p>縮排的空白</p>
+                    <ul>
+                        <li><span>使用 tab 作為縮排空白</span>，而不是空白字元</li>
+                        <li>使用一個 tab 至少能取代四個空白字元，因此原始碼檔案會更小</li>
+                    </ul>
+                    </ul>
+
+                </article>
+
+
+
+
+                <article>
+                    <h2 class="title">Summary</h2>
+                    <p>今天上的還挺開心的，練習都可以做出來，感覺很有成就感！莫名覺得有時候寫程式很像在解腦筋急轉彎，很是有趣呢。希望之後 php 課程我也都能聽懂，加油！</p>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Copyright 2021 Alice 學習筆記
+    </footer>
+</body>
+
+</html>

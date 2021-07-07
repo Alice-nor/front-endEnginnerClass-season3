@@ -10,8 +10,7 @@
 統整我閱讀到的，關於 PHP 之推薦閱讀網站 - 
 
 官方網站：[PHP: Hypertext Preprocessor](https://www.php.net/) 
-
-適合 PHP 初學者：[歡迎來到 Jollen 的網站 :: PHP](https://www.jollen.org/php/) 
+[寫給朋友的 PHP 從 0 到 100 實戰教程](https://ithelp.ithome.com.tw/users/20107394/ironman/1332) 
 
 月份 | 日期 | Demo | 簡要內容
 ---- |---- |---- |----
@@ -21,4 +20,5 @@
 07  | 02  | [Networks Management](https://alice-nor.github.io/front-endEnginnerClass-season3/0702%20-%20Networks%20Management/index.html)     | 廣播傳送、路由器、ip、網路七層架構...
 07  | 05  | [Web front-end development](https://alice-nor.github.io/front-endEnginnerClass-season3/0705%20-%20Web%20front-end%20development/index.html)     | Node.js、module、網路頁面導向（server、router）....
 07  | 06  | [PHP Network database](https://alice-nor.github.io/front-endEnginnerClass-season3/0706%20-%20PHP%20Network%20database/index.html)     | PHP 資料型態、流程控制、函式與錯誤處理...
+07  | 07  | [HTML5](https://alice-nor.github.io/front-endEnginnerClass-season3/0706%20-%20PHP%20Network%20database/index.html)     | CSS position、float、clear、RWD...
 

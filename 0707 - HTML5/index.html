@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's notes | frond-end Class</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="book">
+            <h1 class="h1"><a href="../index.html">Alice's<br>notes</a></h1>
+            <!-- 右邊標籤區 -->
+            <div class="link">
+                <!-- 六月的分頁 -->
+                <a href="../indexJune.html">六月</a>
+                <!-- 七月的分頁 -->
+                <a href="../indexJuly.html">七月</a>
+                <!-- 八月的分頁 -->
+                <a href="../indexAug.html">八月</a>
+            </div>
+
+            <!-- 中央筆記區 -->
+            <div class="text">
+                <!-- 抄筆記 -->
+                <p class="date">2021/07/07 HTML5</p>
+
+                <article>
+                    <h2 class="title">HTML5</h2>
+                    <p>今天 HTML5 學了一些 position、float、clear 跟 RWD....。對我來說比較特別的是學到：sticky！我從來沒有用過這個屬性，沒想到他的效果是可以取代原本要用 JS 才能實作出來的（我之前看到都以為要用 JS）真的是一大收穫！</p><br>
+
+                    <p><a href="https://ithelp.ithome.com.tw/articles/10241079">《Sticky position》</a></p>
+                    <p>iT邦幫忙這篇文章裡有說到何謂 sticky：</p>
+                    <ul>
+                        <li>在還沒有碰到 scrolling ancestor，就像是 position: relative 一樣</li>
+                        <li>在碰到 scrolling ancestor 後，就像是 position: absolute 一樣，位置會固定在相對於參考點的絕對位置上，而這個參考點就是 scrolling ancestor。</li>
+                    </ul>
+                    <p>老師在講義上關於 sticky 的解釋為：</p>
+                    <p>物件被定位為 sticky 元件，捲軸 (scroll) 開始會跟著捲動，當<span>元件置頂時會定位成 fixed 元件，與上端緊貼(top:0)</span>。捲軸推回原位時會定位成 relative。因此 <span>sticky 定位的特性是介於 relative 與 fixed 切換</span>。</p><br>
+
+
+                    <p>下面做一個簡單 sticky 的效果呈現。請滑動滑鼠讓 sticky 位置在最上面，就可以看到效果了！真的好實用啊！</p>
+                    <p class="sticky">我是 sticky 的示範！請滑動滑鼠看效果～</p>
+                    <br>
+
+                    <p>然後終於學到 RWD 了呢！目前都還是小練習，寫起來還是頗順手的。最後我們有小練習今天學到的東西，並做 RWD。雖然我覺得配色不好看，但下面是今天最後的練習。（照著老師要的樣式做出來的）</p>
+                    <img src="../img/0707.png" alt="小網站練習">
+                </article>
+
+
+
+
+                <article>
+                    <h2 class="title">Summary</h2>
+                    <p>開始有點像是驗收我的自學成果的感覺，雖然目前都還是比較簡單與基礎的階段，但我可以很快速的做出想要的版式與搭配，還是讓我感到很有成就感的！也對於能上這堂課有了點慶幸，希望我最終可以達到想要的階段呢！</p>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Copyright 2021 Alice 學習筆記
+    </footer>
+</body>
+
+</html>

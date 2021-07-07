@@ -173,6 +173,20 @@ textarea {
 }
 
 
+/* 0707 sticky 示範 */
+
+.sticky {
+    margin: 10px 0;
+    position: sticky;
+    top: -30px;
+    text-align: center;
+    color: white;
+    background-color: darkslategray;
+    padding: 10px;
+    letter-spacing: 3px;
+}
+
+
 /* footer區 */
 
 footer {

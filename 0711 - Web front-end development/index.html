@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's notes | frond-end Class</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="book">
+            <h1 class="h1"><a href="../index.html">Alice's<br>notes</a></h1>
+            <!-- 右邊標籤區 -->
+            <div class="link">
+                <!-- 六月的分頁 -->
+                <a href="../indexJune.html">六月</a>
+                <!-- 七月的分頁 -->
+                <a href="../indexJuly.html">七月</a>
+                <!-- 八月的分頁 -->
+                <a href="../indexAug.html">八月</a>
+            </div>
+
+            <!-- 中央筆記區 -->
+            <div class="text">
+                <!-- 抄筆記 -->
+                <p class="date">2021/07/11 Web front-end development</p>
+
+                <article>
+                    <h2 class="title">npm</h2>
+                    <ul>
+                        <li>查詢 npm 版本：npm -v</li>
+                        <li>更新 npm 套件：npm install npm -g（全域安裝）</li>
+                        <li>區域安裝套件 npm install 套件名稱：npm install express</li>
+                    </ul><br>
+                </article>
+
+                <article>
+                    <h2 class="title">express</h2>
+                    <p>我電腦實際 package.json 位置好深..。實際要下載 express 不太知道要下載到哪裡，老師的方式對我來說好像不管用（應該跟電腦是mac有關？）。找到了我可以使用的方式，這邊的方式可以成功下載：<a href="https://expressjs.com/zh-tw/starter/installing.html">Express</a></p>
+                    <img src="../img/0711-1.jpg">
+                    <p>（這時 work 這個資料夾內就會有幾個檔案生成了，是為套件內容）</p><br>
+
+                    <p>Node.js Express 框架</p>
+                    <ul>
+                        <li>是一個最小且最靈活的 Node.js Web 應用程式框架</li>
+                        <li>提供設立中介軟體（middleware）響應 HTTP 請求</li>
+                        <li>定義了用於執行基於 HTTP 方法和 URL 不同動作的路由表</li>
+                        <li>允許動態渲染基於參數傳遞給模板的 HTML 頁面</li>
+                    </ul><br>
+
+                    <p>靜態網站資料夾命名為 public 是大部分習慣的命名法，但也不一定要這樣使用。</p>
+                    <p>不同路徑用 get 或 post 去撰寫。</p>
+                    <p>以前對 表單的 get 與 post 總有點疑惑，是隨著時間過去一直有在學習，才開始比較理解它的用法與意思。今天的 express 寫到 get 、post 與 html 就可以很清楚了解他的概念了。</p>
+                    <p>用後端 express 操控表單為 get 或 post 時，它會導向到什麼頁面或呈現什麼文字。</p>
+                    <br>
+                    <p>以下為描寫路徑的方法</p>
+                    <textarea readonly class="code" style="height:470px">
+    // b？代表 b 可有可無
+    // 路徑符合 /acd /abcd
+    app.get('/ab?cd', function(req, res) {
+    res.send('get ab?cd')
+    });
+
+    // 路徑符合 /abcd, /abxcd, /abxydpe...
+    // ab*cd 代表 ab 後可有無限多個字母，並以 cd 結尾
+    app.get('/ab*cd', function(req, res) {
+        res.send('get /ab*cd:' + req.url)
+    });
+
+    // 路徑符合 /wxyz /wxxyz /wxxxxyz
+    // + 代表 + 前面的字母可以出現無數次以上
+    app.get('/wx+yz', function(req, res) {
+        res.send('get /wx+yz:' + req.url)
+    });
+
+    // 路徑符合 /test /tesest
+    // () 與 ? 都代表可有可無
+    app.get('/tes(es)?t', function(req, res) {
+        res.send('get /tes(es)?t:' + req.url)
+    });
+
+    app.get('/tes(es)+t', function(req, res) {
+        // + 就代表前面可以無限次，這邊就是 es 可以無限次
+        res.send('get /tes(es)+t:' + req.url)
+    });
+
+                    </textarea><br>
+
+                    <p>格式化字串的輸出， %s 表示輸出字串，會從後方抓參數。 <span>('Listen at http://%s:%s', host, port)</span> → 第一個 %s 就會抓 host，第二個 %s 就會抓 port。</p>
+                    <p>老師說這是 C 語言的東西，但在這邊也可以應用。第一次遇到格式化字串輸出，還是蠻有趣的，而且感覺很好用！接著下面是 JSON 的寫法（get 時）</p><br>
+
+                    <img src="../img/0711-2.png">
+                    <p>要用到 post 的話，中間要先經過一個 middleware 中介軟體（bodyParser.urlencoded），請求會先經過它，才跑後面的程式。</p>
+                    <img src="../img/0711-3.png"><br>
+                    <p>看到這篇 stack overflow 的問答，覺得下面有網友答的很好。</p>
+                    <p><a href="https://stackoverflow.com/questions/23259168/what-are-express-json-and-express-urlencoded">stack overflow : What are express.json() and express.urlencoded()?</a></p>
+                    <textarea readonly class="code" style="height:200px">
+    // In body-parser you can do
+
+    // calling body-parser to
+    // handle the Request Object from POST requests
+    var bodyParser = require('body-parser');
+
+    // parse application/json,
+    // basically parse incoming Request Object as a JSON Object 
+    app.use(bodyParser.json());
+
+    // parse application/x-www-form-urlencoded,
+    // basically can only parse incoming Request Object if strings or arrays
+    app.use(bodyParser.urlencoded({ extended: false }));
+
+    // combines the 2 above, then you can
+    // parse incoming Request Object if object,
+    // with nested objects, or generally any type.
+    app.use(bodyParser.urlencoded({ extended: true }));
+                    </textarea>
+                    <p>這邊也一解我對於 { extended: false / true } 的疑問。 false 只能接受字串或陣列， true 能接收任何形式。以及回答者也回答：</p>
+                    <ul>
+                        <li>當使用 GET 請求時，沒有必要使用 express.json() 與 express.urlencoded() </li>
+                        <li>當使用 POST 和 PUT 請求時才需要使用，因為兩者在傳送資料，並讓 server 接受與存取這些資料</li>
+                    </ul>
+                    <br>
+
+                    <p>下載 multer 語法：</p>
+                    <ul>
+                        <li>npm install muter</li>
+                        <li>npm i multer</li>
+                    </ul>
+                </article>
+
+
+                <article>
+                    <h2 class="title">middleware</h2>
+                    <p>express 中介軟體，也類似 function，不過會先執行中介軟體才執行其他程式碼。其中的 next() 很重要，若沒有加上 next()，程式碼就會停在裡面不會往下。若過濾網址的 get / post 在中介軟體之前，且符合過濾器則不會執行中介軟體，但若沒有符合過濾器，則會執行中介軟體。</p><br>
+                    <p>幫助理解之文章：<a href="https://medium.com/pierceshih/%E7%AD%86%E8%A8%98-%E4%BD%95%E8%AC%82-middleware-%E5%A6%82%E4%BD%95%E5%B9%AB%E5%8A%A9%E6%88%91%E5%80%91%E5%BB%BA%E7%AB%8B-express-%E7%9A%84%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F-19082b1d8e06">「筆記」- 何謂 Middleware？如何幫助我們建立 Express 的應用程式</a>                        、 <a href="https://expressjs.com/zh-tw/guide/writing-middleware.html">Express : 撰寫中介軟體以用於 Express 應用程式中</a> 、 <a href="https://ithelp.ithome.com.tw/articles/10203041">[鐵人賽Day04] - 淺談Middleware</a></p>
+                </article>
+
+
+                <article>
+                    <h2 class="title">Express 產生器</h2>
+                    <ol>
+                        <li>先安裝產生器（只做一次）-> npm install express-generator -g</li>
+                        <li>產生 express 專案 -> express 專案名稱。express myapp</li>
+                        <li>到專案目錄做初始化 -> cd myapp & npm install</li>
+                        <li>執行專案 -> SET DEBUG=myapp.* & npm start</li>
+                    </ol>
+                    <img src="../img/0711-4.png">
+
+                    <p>JADE 模板基本用法</p>
+                    <ul>
+                        <li>只要向後退一格，就表示該標籤則是在它的下層</li>
+                        <li>直接在標籤後空一格就可加入文字</li>
+                        <li>也可在標籤斷行的後方加入（可多行）</li>
+                        <li>jade 繼承，可以代換的元素用block表示</li>
+                        <li>block 後方的變數可自取並繼承取代</li>
+                    </ul>
+                    <br>
+
+                    <p>express 產生器感覺蠻有趣的，jade 竟然還可以繼承跟（include）跟使用函數（mixin）。之後要找一天把以前做的網站拿出來用 express 產生器練習看看！看可不可以成功連線！</p>
+                </article>
+
+                <article>
+                    <h2 class="title">Summary</h2>
+                    <p>今天真的收穫滿滿！學到了好多，覺得很開心！比較後端的東西學起來也很有趣呢。找工作時看到 node.js、express，總是對這兩個東西不太熟悉，上了這堂課後終於可以好好地摸一摸他們了！即使下禮拜就要換學 React 了，沒有再繼續鑽研 express，但找到方向可以自學了，太棒了！（我對下禮拜 React 也是滿懷期待呢～）</p>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Copyright 2021 Alice 學習筆記
+    </footer>
+</body>
+
+</html>

@@ -71,7 +71,7 @@
                     </ul>
                     <p>為了獲得模組的功能要做的第一件事是把它們導出來。使用 export 語句來完成。最簡單的方法是把它（指 export 語句）放到你想要導出的項前面。export 要放在最外層，<span>不能夠在函數內使用 export </span>。</p><br>
                     <p>一個更方便的方法導出所有你想要導出的模組的方法是在模組文件的末尾使用一個export 語句，語句是用花括號括起來的用逗號分割的列表。如下：</p>
-                    <textarea readonly class="code">example: export { name, draw, reportArea, reportPerimeter };</textarea><br>
+                    <textarea readonly class="code" style="height: 20px">example: export { name, draw, reportArea, reportPerimeter };</textarea><br>
                     <p>把模組應用到 HTML 時，需要把 type="module" 放到 script 標籤中</p>
                     <textarea readonly class="code"><script type="module" src="main.mjs"></script></textarea>
                     <p>你只能在模組內部使用 import 和export 語句 ；不是普通腳本文件。</p><br>

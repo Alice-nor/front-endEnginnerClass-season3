@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's notes | frond-end Class</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="book">
+            <h1 class="h1"><a href="../index.html">Alice's<br>notes</a></h1>
+            <!-- 右邊標籤區 -->
+            <div class="link">
+                <!-- 六月的分頁 -->
+                <a href="../indexJune.html">六月</a>
+                <!-- 七月的分頁 -->
+                <a href="../indexJuly.html">七月</a>
+                <!-- 八月的分頁 -->
+                <a href="../indexAug.html">八月</a>
+            </div>
+
+            <!-- 中央筆記區 -->
+            <div class="text">
+                <!-- 抄筆記 -->
+                <p class="date">2021/07/13 HP Network database</p>
+
+                <article>
+                    <h2 class="title">PHP</h2>
+                    <p>PHP的變數範圍</p>
+                    <ul>
+                        <li>區域變數（Local Variables）：對於函數內指定的變數，變數只能在函數內使用，函數外的程式碼並無法存取此變數。請注意函數參數也是一種區域變數</li>
+                        <li>全域變數（Global Variables）：如果變數是在函數外宣告，整個 PHP 程式的各函數和其他程式碼都可以使用此變數。全域變數如果在函數中使用，使用前需要先宣告成 global</li>
+                        <li>靜態變數（Static Variables）：這也是一種區域變數，在執行函數後，變數值並不會遺失。</li>
+
+                    </ul>
+                    <br>
+
+                    <p>require() 可以在 PHP 程式插入其他檔案的 PHP 程式碼，也就是將 require() 程式碼位置取代成引入檔的內容。 require 'filename'; 檔案一定要存在</p>
+                    <p>PHP 的 include() 和 require() 的功能和使用方式都很相似，只是 include() 的引入檔如果不存在，只會顯示警告訊息，PHP 程式一樣可以繼續執行。</p>
+                    <p><span>include_once() 表示如果之前已經匯入過的檔案，就不會再匯入</span></p><br>
+
+
+                    <p>時間刻記是從 1970/ 01/ 01 到指定日期/時間的秒數。mktime() 函數是傳回目前時間或指定日期/時間的時間刻記。關於如何使用 Date() 與 mktime() 這裡有文章可以參考：<a href="https://www.webtech.tw/info.php?tid=25">PHP Date 函數使用與各項參數所代表的意義</a> 、 <a href="https://www.webtech.tw/info.php?tid=PHP_mktime_%E5%87%BD%E6%95%B8">PHP mktime 函數</a>
+                    </p>
+                    <p>常用時間如下：</p>
+                    <ul>
+                        <li>H – 表示時 (00 to 23)</li>
+                        <li>h – 表示時 (01 to 12)</li>
+                        <li>i – 表示分 (00 to 59)</li>
+                        <li>s – 表示秒 (00 to 59)</li>
+                        <li>a - 表示中午之前或之後 (am or pm)</li>
+                    </ul>
+                    <p><span>! 大小寫有關係 ！</span>（例如：若 H 打成 h 會沒有作用）</p>
+                    <br>
+
+                    <p>PHP 的 strtotime() 函數可以剖析口語化的日期/時間描述來取得時間刻記，基本語法如下所示：int strtotime(string time [, int timestamp])</p>
+                    <p>上述函數傳回字串，第1個參數是描述字串，第2個參數是選項，就是需要轉換的時間刻記，如果沒有此參數，就是現在的時間刻記。可以搭配這篇文章閱讀：<a href="https://www.wibibi.com/info.php?tid=PHP_strtotime_%E5%87%BD%E6%95%B8">PHP strtotime 函數</a> 。
+                    </p><br>
+
+                    <p>PHP 的 gettype() 函數可以取得參數變數的 PHP 資料型態；settype() 函數可以指定變數的資料型態，就是將變數轉換成其他資料型態。</p><br>
+
+                    <p>PHP 的 isset() 函數檢查變數是否有設定；PHP 的 empty() 函數檢查變數是否為空值(empty)。這兩個函式比較容易弄混，推薦閱讀：<a href="https://my.oschina.net/yoyo1987/blog/127840">php empty()和isset()的區別</a> ，以下是我標記的文中重點。</p>
+                    <ul>
+                        <li>如果變量為 0，則 empty() 會返回 true，isset() 會返回 true</li>
+                        <li>如果變量為空字元串，則 empty() 會返回 true，isset()會返回 true</li>
+                        <li>如果變量未定義，則 empty() 會返回 ture，isset()會返回 false</li>
+                    </ul> <br>
+
+                    <p>錯誤處理（Error Handling）是一種處理錯誤的機制，可以處理直譯過程的語法和語意錯誤，或執行時的環境錯誤和程式中的邏輯錯誤。php 錯誤處理：</p>
+                    <ul>
+                        <li>語法錯誤</li>
+                        <li>執行時錯誤</li>
+                        <li>邏輯錯誤</li>
+                    </ul>
+                    <p>exit() 與 die() 的錯誤處理：PHP 程式最簡單的錯誤處理就是使用 exit() 或 die() 終止程式執行和顯示一段錯誤訊息。exit() 與 die() 並不是真正的函數，它是 PHP 語言的建構子，例如：使用 PHP 的 fopen() 函數開啟檔案，如下所示：</p>
+                    <textarea readonly class="code" style="height:30px">
+$fp = @fopen($filename, "r")
+    or exit("Error: Your file $filename open error!<br/>”);
+                    </textarea>
+                    <p>@ - 代表如果發生錯誤，會 exit 並印出自定義之錯誤訊息</p>
+                    <br>
+
+                    <p>PHP 提供 error_reporting() 函數來指定 PHP 程式需要回報的錯誤等級。換句話說，我們可以只回報所需的錯誤，而隱藏其他並不需要的錯誤，如下所示：</p>
+                    <ul>
+                        <li>error_reporting(0) // 關掉回報</li>
+                        <li>error_reporting(E_ALL); // 回報所有的錯誤</li>
+                        <li>error_reporting(E_ERROR | E_WARNING | E_NOTICE); // 指定這三種錯誤等級都需要回報</li>
+                    </ul><br>
+
+                    <p>在 PHP 程式可以使用 set_error_handler() 函數指定一個函數作為錯誤處理函數，如下所示：</p>
+                    <textarea readonly class="code" style="height:250px">
+set_error_handler('myErrorHandler');
+
+function myErrorHandler($type, $msg, $file, $line) {
+    switch( $type ) {
+        case E_ERROR: echo "<b>致命錯誤:</b><br/>";
+            break;
+        case E_WARNING: echo "<b>警告錯誤:</b><br/>";
+            break;
+        case E_NOTICE: echo "<b>注意錯誤</b><br/>";
+            break;
+    }
+    // 顯示錯誤訊息
+    // 寫入記錄檔案
+    …………
+}
+                    </textarea>
+                    <p>產生使用者的自訂錯誤 - </p>
+                    <ul>
+                        <li>在 PHP 錯誤等級中，E_USER_ERROR、E_USER_WARNING 和 E_USER_NOTICE 錯誤等級可以建立使用者的自訂錯誤。</li>
+                        <li>在 PHP 程式是呼叫 trigger_error() 函數產生使用者自訂錯誤：trigger_error("密碼是空字串!", E_USER_ERROR)。</li>
+                    </ul>
+                    <br>
+
+                    <p><a href="https://www.wibibi.com/info.php?tid=247">PHP print_r 輸出陣列</a></p>
+                    <p>PHP print_r 用來印出陣列（PHP Array）的內容，可以使用讀者可閱讀方式顯示陣列內容</p><br>
+
+                    <p>陣列相加？</p>
+                    <p>PHP 可以直接將陣列變數指定成其他陣列變數：$c = $b + $a; 將陣列運算式指定給陣列變數 $c，「+」符號是PHP 陣列運算子，可以執行兩個陣列變數的聯集運算。</p>
+                    <p>陣列 + -> 聯集運算，取得第1個運算元的所有元素，再加第2個運算元陣列索引不存在第1個陣列的元素 <span>！不是說值！是說索引！</span></p>
+
+                    <ul>
+                        <li>func_num_args() - 取得傳入的函數參數個數</li>
+                        <li>func_get_args() - 取得傳入的函數參數的陣列</li>
+                        <li>func_get_arg(index) - 取得參數index的第幾個參數值，從0開始</li>
+                    </ul>
+                </article>
+
+
+
+
+                <article>
+                    <h2 class="title">Template literals</h2>
+                    <p>習慣了使用 JavaScript 的 <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Template_literals">Template literals（樣板字面值）</a> ，它允許放入字串與嵌入運算式的字串字面值，我覺得非常好用！畫面看起來也比較好看、好閱讀，一開始在 php 時會試著使用，發現好像是不行的。</p>
+                </article>
+
+
+                <article>
+                    <h2 class="title">Summary</h2>
+                    <p>今天也學了好多！不過練習時有點跟不上， ppt 字比較小，邊打邊思考時間不太夠，雖然最後都有做完，但找時間要在全部練習一遍！</p>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Copyright 2021 Alice 學習筆記
+    </footer>
+</body>
+
+</html>

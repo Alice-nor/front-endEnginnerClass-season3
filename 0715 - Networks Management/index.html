@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's notes | frond-end Class</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="book">
+            <h1 class="h1"><a href="../index.html">Alice's<br>notes</a></h1>
+            <!-- 右邊標籤區 -->
+            <div class="link">
+                <!-- 六月的分頁 -->
+                <a href="../indexJune.html">六月</a>
+                <!-- 七月的分頁 -->
+                <a href="../indexJuly.html">七月</a>
+                <!-- 八月的分頁 -->
+                <a href="../indexAug.html">八月</a>
+            </div>
+
+            <!-- 中央筆記區 -->
+            <div class="text">
+                <!-- 抄筆記 -->
+                <p class="date">2021/07/08 Networks Management</p>
+
+                <article>
+                    <h2 class="title">Basics of Web Design</h2>
+                    <p>網路層 - 主要負責傳送資料的來源端與目的端的定址（ip）。 資料連接層 - 控制如何使用網路媒介控制和錯誤檢測之類的各種技術將資料放置到媒體上。</p>
+                    <p>tracerout - 會顯示經過的路由器的 ip。</p>
+                    <p>跨不同網路區域的 ARP 運作：</p>
+                    <ul>
+                        <li>資料送到目的的 PC 是同一個網路區域，這時使用集線器或交換器來傳送，使用目的的 MAC 位址是目的電腦的 MAC。</li>
+                        <li>如果茲要送到目的的 PC 是不同的網路區域時，這時候就要使用路由器來做繞送，使用的目的 MAC 位址是預設閘道的 MAC。</li>
+                    </ul><br>
+
+                    <p>ARP 根本不會問不同網路區域的其他電腦，而是會去問路由器，再由路由器繞送。</p>
+                    <p>Pratice : 172.30.10.10 網路位元 16</p>
+                    <ul>
+                        <li>1 / 網路 ip:172.30.0.0</li>
+                        <li>2 / broadcast ip:172.30.255.255</li>
+                        <li>3 / host ip range 第一個與最後一個:172.30.0.1 & 172.30.255.254</li>
+                    </ul><br>
+                    <p>Pratice : 172.30.200.10/17</p>
+                    <ul>
+                        <li>1 / 網路 ip:172.30.128.0</li>
+                        <li>2 / broadcast ip:172.30.255.255</li>
+                        <li>3 / host ip range 第一個與最後一個:172.30.128.1 & 172.30.255.254</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h2 class="title">Summary</h2>
+                    <p>今天也是講網路底層的東西...囧TZ，實在不是我擅長的部分嗚嗚嗚。就是很囫圇吞棗的看完老師的講解.....。</p>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Copyright 2021 Alice 學習筆記
+    </footer>
+</body>
+
+</html>

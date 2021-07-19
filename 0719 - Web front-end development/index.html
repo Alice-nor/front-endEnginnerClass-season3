@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's notes | frond-end Class</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="book">
+            <h1 class="h1"><a href="../index.html">Alice's<br>notes</a></h1>
+            <!-- 右邊標籤區 -->
+            <div class="link">
+                <!-- 六月的分頁 -->
+                <a href="../indexJune.html">六月</a>
+                <!-- 七月的分頁 -->
+                <a href="../indexJuly.html">七月</a>
+                <!-- 八月的分頁 -->
+                <a href="../indexAug.html">八月</a>
+            </div>
+
+            <!-- 中央筆記區 -->
+            <div class="text">
+                <!-- 抄筆記 -->
+                <p class="date">2021/07/19 Web front-end development</p>
+
+                <article>
+                    <h2 class="title">JavaScript ES6</h2>
+                    <p>ES6 使用module</p>
+                    <ul>
+                        <li>ES6中，我們可以把js函式、變數、物件打包成模組，然後在其他js檔引入使用</li>
+                        <li>方法是透過export在被模組化的檔案中設定要讓別人使用的東西</li>
+                        <li>在要使用的地方用import、給予一個名字，被輸出的檔案會變成一個物件，名稱是剛剛給予的名字，以物件方式存取就能使用</li>
+                    </ul><br>
+                    <p>node 要使用 ES6 module 模組，需創建 package.json ，裡頭放入：<span>"type":”module"</span></p>
+                </article>
+
+
+                <article>
+                    <h2 class="title">React</h2>
+                    <p>React - </p>
+                    <ul>
+                        <li>編寫程式碼</li>
+                        <li>輸出網頁程式(html、php......)</li>
+                        <li>透過伺服器呈現網頁</li>
+                    </ul><br>
+
+                    <p>使用React前端網頁介面程式庫後</p>
+                    <ul>
+                        <li>載入別人寫好的函式庫（套件）</li>
+                        <li>將新語法/函式庫的程式碼做「打包、編譯」成瀏覽器認得的程式碼（preprocessing）</li>
+                        <li>透過伺服器呈現網頁</li>
+                    </ul><br>
+
+                    <p>React 是一個專注在 UI（view）的 JavaScript 程式庫</p>
+                    <ol>
+                        <li>一次安裝設定好react、 webpack、 babel</li>
+                        <li>npm install create-react-app –g</li>
+                        <li>至操作之目錄新增 create-react-app 檔案名稱</li>
+                    </ol><br>
+                    <img src="../img/0719-1.png">
+                    <p>成功！（關閉後要再次開啟直接 <span>$npm start</span> 即可。大部分情況不用再重新 start，重整畫面即可）</p>
+                    <img src="../img/0719-2.png">
+                    <p>使用 React 時發現一個問題，我之前有下載 html 自動排版的外掛，使用 React 排版會不一樣使操作錯誤，這時用 command+shift+X（mac） 開啟 vscode 外掛頁面，把 JS-CSS-HTML Formatter 暫停使用。</p><br>
+
+                    <p>ReactDom</p>
+                    <ul>
+                        <li>輸出網頁一般是寫入到DOM</li>
+                        <li>ReactDOM.render()，是先將網頁內容寫到virtural DOM，若與原先的DOM內容不同才更新。即更新“需要更新的地方”</li>
+                    </ul><br>
+                    <p>運作流程：</p>
+                    <ol>
+                        <li>將要渲染的內容輸出到ReactDOM</li>
+                        <li>ReactDOM整理要渲染的內容</li>
+                        <li>對原始綁定的div在DOM上的位置做渲染</li>
+                        <li>完成畫面的渲染</li>
+                    </ol><br>
+
+                    <p>JavaScript XML, JSX - JavaScript 裡包 HTML</p>
+                    <ul>
+                        <li>只能傳遞一個元素（因此把要傳遞的東西放小括弧內）</li>
+                        <li>可以在 html 標籤中利用「{}」寫javascript 表示式</li>
+                        <li>style變為一物件、屬性名稱規則改用大寫區隔、屬性的值變成字串（屬性變一物件）若要直接在html中加style要用雙大括號 {{ … }}</li>
+                        <li>css 的 class 在這邊要寫成 className</li>
+                        <li>在元素上傳遞屬性時若省略要指定的值，該資料會獲得true布林值，以下兩個是相同的</li>
+                        <textarea readonly class="code" style="height:40px">
+    <button value={true} > 是 </button>
+    <button value > 是 </button>
+                        </textarea>
+                    </ul>
+                    <p>實際操作圖：</p>
+                    <img src="../img/0719-3.png">
+                    <img src="../img/0719-4.png">
+                    <p>React Component</p>
+                    <ul>
+                        <li>以函式實現React Component</li>
+                        <li>function 名稱第一個字為大寫</li>
+                        <li>&lt自設的元素名稱 /&gt 或 &lt自設的元素名稱 &gt&lt/自設的元素名稱 &gt</li>
+                    </ul><br>
+                    <p>可以做出進度條，並依照父輩大小，子輩使用百分比去調整。</p>
+                    <img src="../img/0719-5.png">
+
+                    <p>props 對 component 的影響</p>
+                    <ul>
+                        <li>下列情況會產生ReactDOM進入re-render的更新程序 -> props的值改變時 / state的值改變時</li>
+                        <li>probs不能被元件自己更改（read-only）</li>
+                        <li>probs也可綁定函式</li>
+                    </ul><br>
+
+                    <p>在 react component 中，我們把包在標籤中間的東西，稱為 children - &ltApp&gt 其他資料 &lt/App&gt。當 children 的內容改變時，畫面也會重繪。</p>
+                    <ul>
+                        <li>須在建構函式 constructor（）中加 super（props） 敘述</li>
+                        <li>使用須加上this.props</li>
+                    </ul><br>
+                    <p>state 與 setState</p>
+                    <ul>
+                        <li>state是class component的預設好會去檢查的一個特殊的member data</li>
+                        <li>當state被改變時，會進入re-render的update程序，更新畫面</li>
+                        <li>state的結構也是一個物件，可在建構子中宣告</li>
+                    </ul>
+
+                </article>
+
+
+
+                <article>
+                    <h2 class="title">Summary</h2>
+                    <p>今天學了前端框架之一的—— React！很是期待已久的內容，學起來也覺得頗有趣的，雖然依然有很多東西要繼續再自己鑽研，但覺得 coding 真的是挺有趣的，時不時就會這麼覺得，遇到 error 時，就像玩找碴 XD，沒有 error 時，看到畫面成功呈現也覺得很有成就感！
+                    </p>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Copyright 2021 Alice 學習筆記
+    </footer>
+</body>
+
+</html>

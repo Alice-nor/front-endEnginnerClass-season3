@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's notes | frond-end Class</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="book">
+            <h1 class="h1"><a href="../index.html">Alice's<br>notes</a></h1>
+            <!-- 右邊標籤區 -->
+            <div class="link">
+                <!-- 六月的分頁 -->
+                <a href="../indexJune.html">六月</a>
+                <!-- 七月的分頁 -->
+                <a href="../indexJuly.html">七月</a>
+                <!-- 八月的分頁 -->
+                <a href="../indexAug.html">八月</a>
+            </div>
+
+            <!-- 中央筆記區 -->
+            <div class="text">
+                <!-- 抄筆記 -->
+                <p class="date">2021/07/20 Web front-end development</p>
+
+                <article>
+                    <h2 class="title">React</h2>
+                    <p>在 React 裡面，run 一遍函式 setState 後，其實數值並不會立刻改變更新，要到 render 才會發生改變！若是要測驗時，要特別注意！（或要在函式裡使用 callback function 去取得 render 後的結果）</p>
+                    <p>函數中的狀態變數宣告 - const [狀態變數名稱, 改變狀態的函數名稱] = useState(狀態初始值);</p><br>
+
+                    <p>老師說要做可以+1、-1、歸零的計算器，想說搞不好很難，沒想到使用 useState 是真的好簡單耶！以下是呈現結果。（後來看了老師的寫法，發現老師是用 class 來寫，超級少程式碼的！學習～）</p>
+                    <img src="../img/0720-1.gif">
+
+                    <p>useState</p>
+                    <ul>
+                        <li>useState可以視為state與setState的集合體。宣告：變數型態 [state變數名稱, setState函式名稱] = useState(state變數初始值)</li>
+                        <li>useState不可以在function component中的nest function、if-else、迴圈中被定義使用</li>
+                    </ul>
+                    <textarea readonly class="code" style="height:220px">
+    const fun=() =>{
+        // can't use useState here
+        // const [x, setX] = useState(0);
+    }
+    
+    if(n>10){
+        // can't use useState here
+        //const [y, setY] = useState(0)
+    }
+    
+    for(let i =0; i<2; i++) {
+        // can't use useState here
+        //const [z, setZ] = useState(0)
+    }
+                    </textarea>
+                    <br>
+                    <p>寫到這邊覺得好Q哈哈，import 雙親、哥哥跟姊姊XD</p>
+                    <img src="../img/0720-2.png">
+                    <p>Fetch API - Fetch是一個Promise，語法如下：</p>
+                    <textarea readonly class="code" style="height:150px">
+    fetch( url of request, {
+        /* set request content*/
+    })
+    .then(res => res.json()) /* json request */
+    .then(data => {
+        /* what to do after receiving request data */
+    })
+    .catch(e => {
+        /* what to do when there's error */
+    })
+                        </textarea>
+                    <p>今天有小問題一直找不到，真的看到眼睛脫窗，後來在群組問，有同學幫助回答我了XDD 真的眼睛脫窗鬼遮眼看不清楚。感謝同學！（成功啦）</p>
+                    <img src="../img/0720-3.png">
+                    <p>原來 get 跟 post 大小寫有分耶...我以為都可以（驚）害我今天下午開螢幕跟老師分享了一會...尷尬，全班跟我一起糾錯。很開心！最後都有成功了～感謝老師幫忙揪錯，同學還幫我找哪裡有錯，嗚嗚感動。</p>
+                    <img src="../img/0720-4.png">
+                    <p>老師還跟我恭喜，笑死，好可愛。</p>
+                    <img src="../img/0720-5.jpg">
+                </article>
+
+
+
+                <article>
+                    <h2 class="title">Summary</h2>
+                    <p>今天學的東西有比較難了！因為有真正串接 API，很多像是 json_encode、$_SERVER['CONTENT_TYPE']==='application/x-www-form-urlencoded' 這樣的東西都還沒搞得非常清楚，所以依然還有很多東西要再去看文章學習了！加油～</p><br>
+                    <p>想附上一些程式碼，關於程式碼的部分要到 github 上去了。</p>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Copyright 2021 Alice 學習筆記
+    </footer>
+</body>
+
+</html>

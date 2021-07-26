@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's notes | frond-end Class</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="book">
+            <h1 class="h1"><a href="../index.html">Alice's<br>notes</a></h1>
+            <!-- 右邊標籤區 -->
+            <div class="link">
+                <!-- 六月的分頁 -->
+                <a href="../indexJune.html">六月</a>
+                <!-- 七月的分頁 -->
+                <a href="../indexJuly.html">七月</a>
+                <!-- 八月的分頁 -->
+                <a href="../indexAug.html">八月</a>
+            </div>
+
+            <!-- 中央筆記區 -->
+            <div class="text">
+                <!-- 抄筆記 -->
+                <p class="date">2021/07/23 Web front-end development</p>
+
+                <article>
+                    <h2 class="title">React</h2>
+                    <p>React 打包？</p>
+                    <ol>
+                        <li>打開 xampp -> 在 htdocs 開新資料夾</li>
+                        <li>在 package.json 檔案新增 homepage 欄位（ex: "homepage": "/myapp”,）意思為把程式打包到哪個目錄</li>
+                        <li>至要打包之檔案 $npm run build</li>
+                        <li>此時已有新的資料夾名為 build，把 build 底下的資料全部複製到 htdocs myapp 的資料夾內</li>
+                    </ol><br>
+
+                    <p>成功打包！localhost 打開成功～（舊檔案有更改要覆蓋在 htdocs 的檔案，就要重新打包再複製貼上一次）</p>
+                    <img src="../img/0723-1.png">
+
+                    <p><a href="https://material-ui.com/">Material-ui</a> 是 React component 的套件。</p>
+                    <p>material-ui 步驟：</p>
+                    <ol>
+                        <li>至 week4 資料夾內（與 myapp 同層）create-react-app maui</li>
+                        <li>cd myui</li>
+                        <li>npm install @material-ui/core</li>
+                        <li>npm install @material-ui/icons</li>
+                        <li>編輯 app.js</li>
+                        <li>npm start</li>
+                    </ol>
+                    <p>用 function 與 material-ui 做出來的簡單 todolist。</p>
+                    <img src="../img/0723-2.jpg">
+                </article>
+
+
+
+                <article>
+                    <h2 class="title">Summary</h2>
+                    <p>最後上的頭有點暈，越來越繞了，而且我一直新增不了檔案，確認過程式碼很多遍了，都跟老師一樣，不知道為什麼就是無法新增！所以心情不是很好......。</p><br>
+                    <p>假日的時候有找時間回頭看，發現癥結點了！學到了要更改權限，在 api 的資料夾也更改了全縣，終於成功了！我真的要喜極而泣了！Mac 的話可以搭配這篇簡單的文調整權限：<a href="https://support.apple.com/zh-tw/guide/mac-help/mchlp1038/mac">若您需要在 Mac 上打開項目的權限</a>。（在需要調整權限之資料夾右鍵即可調整）</p>
+                    <img src="../img/0723-3.png">
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Copyright 2021 Alice 學習筆記 <a href="https://github.com/Alice-nor/front-endEnginnerClass-season3">Github</a>
+    </footer>
+</body>
+
+</html>

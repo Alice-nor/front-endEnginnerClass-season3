@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's notes | frond-end Class</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="book">
+            <h1 class="h1"><a href="../index.html">Alice's<br>notes</a></h1>
+            <!-- 右邊標籤區 -->
+            <div class="link">
+                <!-- 六月的分頁 -->
+                <a href="../indexJune.html">六月</a>
+                <!-- 七月的分頁 -->
+                <a href="../indexJuly.html">七月</a>
+                <!-- 八月的分頁 -->
+                <a href="../indexAug.html">八月</a>
+            </div>
+
+            <!-- 中央筆記區 -->
+            <div class="text">
+                <!-- 抄筆記 -->
+                <p class="date">2021/07/27 PHP Network database</p>
+
+                <article>
+                    <h2 class="title">PHP</h2>
+                    <p>PHP 提供一組結合陣列的預定變數，這是 PHP 引擎建立的變數，可以取得 PHP 程式和 HTTP 標頭的相關資訊。預定變數預設擁有全域的變數範圍，稱為「自動全域」（Autoglobals）或「超全域」（Superglobals）變數。</p><br>
+
+                    <p>PHP 的 header() 函數向用戶端送出 HTTP 標頭資訊，透過送出標頭資訊來轉址或定時更新網頁、指定網頁內容和保留期限。在 PHP 程式只需送出指定型態的標頭資料，就可以<span>執行轉址（Location）、更新（Refresh）、指定資料類型（Content-type）和保留期限（Expires）</span>。</p><br>
+
+                    <p>轉址功能是指在執行 PHP 程式時，轉址到其他網址或網站的其他網頁或 PHP 程式，header() 函數是使用 Location 型態來指定轉址的 URL 網址，如下所示：</p>
+                    <textarea readonly class="code" style="height:60px">
+    header("Location: Ch8_1_2.php");
+    header(
+        "Location: http://localhost/Ch03/Ch3_1_1.htm"
+    );
+                    </textarea>
+                    <p>PHP 的 header() 函數可以使用 Refresh 型態指定間隔時間來定時更新網頁，如下所示：</p>
+                    <textarea readonly class="code" style="height:15px">
+    header("Refresh: 2");
+                    </textarea>
+                    <p>上述 Refresh 型態的「:」符號後是間隔時間。如果在一定時間後轉址到其他 URL 網址或 PHP 檔案路徑，只需加上 url 參數，如下所示：</p>
+                    <textarea readonly class="code" style="height:15px">
+    header(“Refresh:2; url=Ch8_1_2a.php");
+                    </textarea>
+                    <p>在 header() 函數可以使用 <span>Content-type</span> 型態指定 HTTP 通訊協定傳送資料到瀏覽器的資料種類，其值是 MIME 資料類型：text/html、text/xml、text/plain、image/jpeg 和image/gif 等。text/html 是預設值。</p>
+                    <textarea readonly class="code" style="height:15px">
+    header("Content-type: text/xml");
+                    </textarea>
+                    <p>上述程式碼指定 Content-type 型態為 text/xml，表示傳送的內容是 XML 文件。</p>
+                    <p>PHP 提供了一組功能，可控制發送到瀏覽器的內容以及何時。這被稱為<span>輸出控制</span>。PHP 引擎可以選擇將處理結果馬上輸出到客戶端的瀏覽器顯示，或先輸出到暫存的輸出緩衝區，等到 PHP 程式執行完或緩衝區已滿，才送到瀏覽器顯示，</p><br>
+                    <p><span>output_buffering 設為 Off，表示不使用輸出緩衝區</span>。 程式可以使用 ob_start() 函數啟用輸出緩衝區。</p><br>
+                    <p>遇到下列情況才將輸出內容送到瀏覽器：</p>
+                    <ul>
+                        <li>執行完 PHP 程式後</li>
+                        <li>執行到 ob_end_flush() 或 ob_flush() 函數將緩衝區內容送出</li>
+                    </ul><br>
+
+                    <p>PHP 表單處理是使用 PHP 預定變數 $_POST 和 $_GET 來取得欄位資料。</p><br>
+
+                    <p>Cookies 的基礎 - </p>
+                    <ul>
+                        <li>一般來說，網站都需要保留一些使用者的瀏覽記錄。例如：使用者是否曾經瀏覽過網站，或一些個人資訊、偏好或選擇。</li>
+                        <li>Cookies 就是儲存這些資料的解決方案之一，也就是用來辨識用戶。</li>
+                        <li>Cookies 的英文原意是小餅乾，源於這些儲存在客戶端電腦的檔案尺寸都很小，Cookies 並不是儲存在伺服器，而是<span>儲存在瀏覽器所在電腦</span>，所以不會浪費伺服器的資源。</li>
+                    </ul><br>
+
+                    <p>交談期追蹤與 Session 變數的基礎 - </p>
+                    <ul>
+                        <li>交談期是指使用者第一次進入網站，直到使用者離開網站為止的整個過程。</li>
+                        <li>PHP 的交談期追蹤和 Cookie 擁有密切的關係，因為 PHP 的交談期追蹤就是透過 Cookie 建立的使用者狀態保留機制。</li>
+                        <li>Session 變數可以在伺服端保留資料，其儲存資料能夠在整個交談期間，<span>跨越不同 PHP 程式來分享資料</span>。</li>
+                        <li>PHP 程式如果啟用交談期（Session）功能，當使用者進入網站，PHP 引擎就會自動指定 Session ID 編號建立一個新的交談期。</li>
+                    </ul><br>
+
+                    <p>交談期追蹤（Session Tracking）也是一種狀態管理。
+                        PHP 引擎實作交談期追蹤是使用 Session 變數，它會指定每一位瀏覽網站的使用者一個 Session ID 編號來作為識別。</p>
+                   
+                </article>
+
+
+
+                <article>
+                    <h2 class="title">Summary</h2>
+                    <p>今天沒有特別的截圖可分享，都是練習的檔案。第一次知道交談期覺得很特別，就像前幾天學 React 那般，可以說是在輸出前有篩選的機制一樣的東西。然後還要再去複習 cookie 與 session，曾閱讀過這兩篇文章覺得很清楚，還要再花時間多看幾遍：<a href="https://chanchandev.com/back-end/Cookies/cookie-intro/3173700095/">Session & Cookie 傻傻分不清楚：Cookie 篇</a> 、 <a href="https://chanchandev.com/back-end/Session/session-intro/1577685640/">Session & Cookie 傻傻分不清楚：Session 篇</a></p><br>
+                    <p>另外，我也會上傳老師提供的程式碼，是非常簡易的購物車功能，以便我之後可以更深入去理解與進階使用。<a href="https://github.com/Alice-nor/front-endEnginnerClass-season3/tree/main/0722%20-%20PHP%20Network%20database/shoppingcart">Shoppingcart</a></p>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Copyright 2021 Alice 學習筆記 <a href="https://github.com/Alice-nor/front-endEnginnerClass-season3">Github</a>
+    </footer>
+</body>
+
+</html>

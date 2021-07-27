@@ -32,66 +32,68 @@
 
                 <article>
                     <h2 class="title">PHP</h2>
-                    <p>PHP 提供一組結合陣列的預定變數，這是 PHP 引擎建立的變數，可以取得 PHP 程式和 HTTP 標頭的相關資訊。預定變數預設擁有全域的變數範圍，稱為「自動全域」（Autoglobals）或「超全域」（Superglobals）變數。</p><br>
-
-                    <p>PHP 的 header() 函數向用戶端送出 HTTP 標頭資訊，透過送出標頭資訊來轉址或定時更新網頁、指定網頁內容和保留期限。在 PHP 程式只需送出指定型態的標頭資料，就可以<span>執行轉址（Location）、更新（Refresh）、指定資料類型（Content-type）和保留期限（Expires）</span>。</p><br>
-
-                    <p>轉址功能是指在執行 PHP 程式時，轉址到其他網址或網站的其他網頁或 PHP 程式，header() 函數是使用 Location 型態來指定轉址的 URL 網址，如下所示：</p>
-                    <textarea readonly class="code" style="height:60px">
-    header("Location: Ch8_1_2.php");
-    header(
-        "Location: http://localhost/Ch03/Ch3_1_1.htm"
-    );
-                    </textarea>
-                    <p>PHP 的 header() 函數可以使用 Refresh 型態指定間隔時間來定時更新網頁，如下所示：</p>
-                    <textarea readonly class="code" style="height:15px">
-    header("Refresh: 2");
-                    </textarea>
-                    <p>上述 Refresh 型態的「:」符號後是間隔時間。如果在一定時間後轉址到其他 URL 網址或 PHP 檔案路徑，只需加上 url 參數，如下所示：</p>
-                    <textarea readonly class="code" style="height:15px">
-    header(“Refresh:2; url=Ch8_1_2a.php");
-                    </textarea>
-                    <p>在 header() 函數可以使用 <span>Content-type</span> 型態指定 HTTP 通訊協定傳送資料到瀏覽器的資料種類，其值是 MIME 資料類型：text/html、text/xml、text/plain、image/jpeg 和image/gif 等。text/html 是預設值。</p>
-                    <textarea readonly class="code" style="height:15px">
-    header("Content-type: text/xml");
-                    </textarea>
-                    <p>上述程式碼指定 Content-type 型態為 text/xml，表示傳送的內容是 XML 文件。</p>
-                    <p>PHP 提供了一組功能，可控制發送到瀏覽器的內容以及何時。這被稱為<span>輸出控制</span>。PHP 引擎可以選擇將處理結果馬上輸出到客戶端的瀏覽器顯示，或先輸出到暫存的輸出緩衝區，等到 PHP 程式執行完或緩衝區已滿，才送到瀏覽器顯示，</p><br>
-                    <p><span>output_buffering 設為 Off，表示不使用輸出緩衝區</span>。 程式可以使用 ob_start() 函數啟用輸出緩衝區。</p><br>
-                    <p>遇到下列情況才將輸出內容送到瀏覽器：</p>
+                    <p>資料庫 -</p>
                     <ul>
-                        <li>執行完 PHP 程式後</li>
-                        <li>執行到 ob_end_flush() 或 ob_flush() 函數將緩衝區內容送出</li>
+                        <li>資料庫（Database）是一種資料儲存單位，一些經過組織的資料集合，眾多出勤管理系統、倉庫管理系統、進銷存系統或小至錄影帶店管理系統，這些應用程式都屬於不同應用的資料庫系統。</li>
+                        <li><span>資料庫系統是由資料庫和資料庫管理系統所組成</span>，資料庫管理系統是一套管理資料庫的應用程式。</li>
+                        <li>關聯式資料庫系統（Relational Database System）是目前資料庫系統的主流。（ex:MySQL）</li>
+                        <li>使用者下達 SQL 結構化查詢語言，透過資料庫管理系統來儲存和管理資料庫儲存的資料。<span>開發資料庫系統就是在設計資料庫、建立應用程式使用介面和決策架構</span>，針對需求設計資料庫，資料庫管理系統本身只負責管理和存取資料庫，作為應用系統的資料來源。</li>
                     </ul><br>
 
-                    <p>PHP 表單處理是使用 PHP 預定變數 $_POST 和 $_GET 來取得欄位資料。</p><br>
-
-                    <p>Cookies 的基礎 - </p>
+                    <p>關聯式資料庫 - </p>
                     <ul>
-                        <li>一般來說，網站都需要保留一些使用者的瀏覽記錄。例如：使用者是否曾經瀏覽過網站，或一些個人資訊、偏好或選擇。</li>
-                        <li>Cookies 就是儲存這些資料的解決方案之一，也就是用來辨識用戶。</li>
-                        <li>Cookies 的英文原意是小餅乾，源於這些儲存在客戶端電腦的檔案尺寸都很小，Cookies 並不是儲存在伺服器，而是<span>儲存在瀏覽器所在電腦</span>，所以不會浪費伺服器的資源。</li>
+                        <li>由一個或多個資料表所組成</li>
+                        <li>多個資料表間使用欄位的資料值來建立連接，以便實作資料表間的關聯性</li>
+                        <li>資料表需要選擇<span>「主鍵」（Primary Key）</span>，這是用來識別資料表唯一記錄的欄位資料</li>
+                        <li>資料庫儲存資料的目的是為了提昇排序和查詢效率，在資料表可以使用「索引」（Index）將資料系統化整理，以便在大量記錄中快速找到記錄或進行排序</li>
                     </ul><br>
 
-                    <p>交談期追蹤與 Session 變數的基礎 - </p>
+                    <p>PRIMARY Key (PK) (主鍵)</p>
                     <ul>
-                        <li>交談期是指使用者第一次進入網站，直到使用者離開網站為止的整個過程。</li>
-                        <li>PHP 的交談期追蹤和 Cookie 擁有密切的關係，因為 PHP 的交談期追蹤就是透過 Cookie 建立的使用者狀態保留機制。</li>
-                        <li>Session 變數可以在伺服端保留資料，其儲存資料能夠在整個交談期間，<span>跨越不同 PHP 程式來分享資料</span>。</li>
-                        <li>PHP 程式如果啟用交談期（Session）功能，當使用者進入網站，PHP 引擎就會自動指定 Session ID 編號建立一個新的交談期。</li>
+                        <li>index 但不能為空值 (NULL)，PK 會自動建立 index 每個 table 只能有一個 PRIMARY Key（建議）</li>
+                        <li>index 建立會占用儲存空間，資料增刪修時會異動。欄位長度是越短越好</li>
                     </ul><br>
 
-                    <p>交談期追蹤（Session Tracking）也是一種狀態管理。
-                        PHP 引擎實作交談期追蹤是使用 Session 變數，它會指定每一位瀏覽網站的使用者一個 Session ID 編號來作為識別。</p>
-                   
+                    <p>在 PHP 程式是呼叫 mysqli_connect() 函數來開啟與建立MySQL 資料庫連接，如下所示：</p>
+                    <textarea readonly class="code" style="height:90px">
+    $link = @mysqli_connect( 
+        'localhost',  // MySQL主機名稱 
+        'root',       // 使用者名稱 
+        'A12345678',  // 密碼
+        'myschool');  // 預設使用的資料庫名稱
+                    </textarea>
+                    <p>在 PHP 程式是呼叫 mysqli_close() 函數來關閉 MySQL 資料庫連接和釋放資料庫連接資源佔用的記憶體空間，如下所示：</p>
+                    <textarea readonly class="code" style="height:15px">
+    mysqli_close($link);
+                    </textarea>
+                    <p>在 React 學 php 連資料庫時總是霧煞煞，今天用簡單的程式連接就很清楚了！</p>
+                    <img src="../img/0727.png">
+
+                    <p>PHP 在成功開啟資料庫連接後，就可以呼叫 mysqli_query() 函數執行 SQL 指令的資料表查詢，如下所示：</p>
+                    <textarea readonly class="code" style="height:15px">
+    if ( $result = mysqli_query($link, $sql) ) { … }
+                    </textarea>
+
+                    <p>在取得結果物件後，就可以呼叫相關函數取出記錄資料或將記錄資料儲存成陣列。我們可以呼叫 <span>mysqli_fetch_assoc()</span> 函數將查詢結果的每一筆記錄存入結合陣列，如下所示：</p>
+                    <textarea readonly class="code" style="height:40px">
+    while( $row = mysqli_fetch_assoc($result) ){ 
+        echo $row["sno"]."-".$row["name"]."<br/>";
+        }
+                    </textarea>
+
+                    <p>資料表查詢結果的結果物件會佔用伺服器的記憶體空間，當不再需要結果物件時，請記得<span>自行釋放佔用的記憶體空間，以免浪費伺服器的寶貴資源</span>。</p>
+                    <p>PHP 是呼叫 mysqli_free_result() 函數釋放結果物件 ($result) 佔用的記憶體空間，如下所示：</p>
+                    <textarea readonly class="code" style="height:15px">
+    mysqli_free_result($result); 
+                    </textarea>
                 </article>
 
 
 
                 <article>
                     <h2 class="title">Summary</h2>
-                    <p>今天沒有特別的截圖可分享，都是練習的檔案。第一次知道交談期覺得很特別，就像前幾天學 React 那般，可以說是在輸出前有篩選的機制一樣的東西。然後還要再去複習 cookie 與 session，曾閱讀過這兩篇文章覺得很清楚，還要再花時間多看幾遍：<a href="https://chanchandev.com/back-end/Cookies/cookie-intro/3173700095/">Session & Cookie 傻傻分不清楚：Cookie 篇</a> 、 <a href="https://chanchandev.com/back-end/Session/session-intro/1577685640/">Session & Cookie 傻傻分不清楚：Session 篇</a></p><br>
-                    <p>另外，我也會上傳老師提供的程式碼，是非常簡易的購物車功能，以便我之後可以更深入去理解與進階使用。<a href="https://github.com/Alice-nor/front-endEnginnerClass-season3/tree/main/0722%20-%20PHP%20Network%20database/shoppingcart">Shoppingcart</a></p>
+                    <p>今天學 php！能夠成功跟後端資料庫連接到真的很有成就感，也覺得很有趣！與資料庫的連接比我想像中簡單好多，上傳與新增檔案也並不困難，接著要再努力自學關於 cookie、session 更深入的內容！
+                    </p>
                 </article>
 
 

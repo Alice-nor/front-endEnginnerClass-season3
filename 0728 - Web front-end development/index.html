@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's notes | frond-end Class</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="book">
+            <h1 class="h1"><a href="../index.html">Alice's<br>notes</a></h1>
+            <!-- 右邊標籤區 -->
+            <div class="link">
+                <!-- 六月的分頁 -->
+                <a href="../indexJune.html">六月</a>
+                <!-- 七月的分頁 -->
+                <a href="../indexJuly.html">七月</a>
+                <!-- 八月的分頁 -->
+                <a href="../indexAug.html">八月</a>
+            </div>
+
+            <!-- 中央筆記區 -->
+            <div class="text">
+                <!-- 抄筆記 -->
+                <p class="date">2021/07/28 Web front-end development</p>
+
+                <article>
+                    <h2 class="title">React</h2>
+                    <p>使用 react 的 cookie 要使用下面的語法下載：</p>
+                    <p>npm install react-cookie</p><br>
+                    
+                    <p>mac 終端機操作 mysql 位置 -</p>
+                    <ol>
+                        <li>/Applications/XAMPP/xamppfiles/bin 資料夾</li>
+                        <li>找到 mysql</li>
+                    </ol>
+                    <img src="../img/0728-1.png">
+
+                    <ul>
+                        <li>show databases; - 顯示資料庫</li>
+                        <li>use 資料庫名稱; - 使用資料庫</li>
+                        <li>show table; - 顯示資料庫內之表格</li>
+                    </ul><br>
+
+                    <p>今天問老師才知道，原來 <span>php 的單引號雙引號是不一樣的</span>！（因為 JS 裡大部份都一樣）<span>雙引號可以帶參數</span>，單引號帶參數會變成字串。（主要是因為 php 裡沒有 JS 的 `` 可以使用，所以我好容易看得眼花....）</p><br>
+
+                    <p>用終端機 create 表格</p>
+                    <img src="../img/0728-2.png">
+
+                    <p>下午卡了一個東西卡很久，一直報錯：Too many re renders React limits the number of renders to prevent an infinite loop，但我覺得很疑惑，我明明就什麼都還沒做，一打開網站就狂 loop...真的找了好久，後來才發現是按鈕那邊寫錯了，本來是要寫：{addGrid}，結果我寫成 {addGrid()}…..所以我不用按就會一直 loop！（因為程式碼掃到他了）原來如此，尷尬XDD</p>
+                    <p>開心終於成功了！接下來做點判斷式就可以了。</p>
+                    <img src="../img/0728-3.png">
+                </article>
+
+
+
+                <article>
+                    <h2 class="title">Summary</h2>
+                   <p>雖然不像之前上的 Java 課程時間還長，也並沒有親自與老師見到面，但今天聽到老師說今天是他最後一堂課時，心裡不免還有點不捨.....，覺得老師真的非常用心，也不厭其煩的理解我們哪裡碰到困難，並一起想辦法 debug。非常喜歡這位老師！老師在群組說：Good luck! 我覺得得到能量了！</p>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Copyright 2021 Alice 學習筆記 <a href="https://github.com/Alice-nor/front-endEnginnerClass-season3">Github</a>
+    </footer>
+</body>
+
+</html>

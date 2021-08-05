@@ -66,8 +66,7 @@ body {
 }
 
 .link a:nth-child(1):hover,
-.link a:nth-child(2):hover,
-.link a:nth-child(3):hover {
+.link a:nth-child(2):hover {
     background-color: brown;
     box-shadow: 5px 3px 0 rgba(0, 0, 0, 0.5);
 }
@@ -90,10 +89,6 @@ body {
 
 .link a:nth-child(2) {
     background-color: #226ea9;
-}
-
-.link a:nth-child(3) {
-    background-color: #407433;
 }
 
 
@@ -365,6 +360,15 @@ footer a {
 table {
     width: 400px;
     border-collapse: collapse;
+}
+
+.demo.julyDemo {
+    width: 100%;
+    justify-content: center;
+}
+
+.demo.julyDemo table {
+    width: 500px;
 }
 
 table,

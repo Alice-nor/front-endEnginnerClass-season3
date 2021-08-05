@@ -40,14 +40,11 @@ node.js  |     |
      | [node.js](https://nodejs.org/en/)  |  node.js 官方網站
      | [Node.js 教程](https://www.runoob.com/nodejs/nodejs-tutorial.html)  |  Runoob.com node.js 教學網站（簡體）
      | [Node.JS - 30 天入門學習筆記](https://ithelp.ithome.com.tw/users/20103526/ironman/1081)  |  2017 iT 邦幫忙鐵人賽文章
----- |---- |----
 PHP  |     | 
      | [PHP: Hypertext Preprocessor](https://www.php.net/)  |  PHP 官方網站
      | [Jollen's PHP 教學專欄](https://www.jollen.org/php/)  |
----- |---- |----
 Material-ui  |     | 
      | [MATERIAL-UI](https://material-ui.com/)  |  React component 套件
----- |---- |----
 React  |     | 
-     | [React](https://zh-hant.reactjs.org/)  |  React 官網網站（中文版）
+、     | [React](https://zh-hant.reactjs.org/)  |  React 官網網站（中文版）
      | 待補充......  |  

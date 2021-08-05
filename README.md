@@ -1,15 +1,12 @@
 # front-endEnginnerClass-season3
   前端網路工程師就業養成班第三期，課堂筆記與小網站
 
-  一開始朋友分享這個上課資訊，我看到課程內容很感興趣，我想學更深入的 JavaScript、jQuery、React、網頁後端等等，所以就報名了。今天（6/30）老師希望我們做小網站當作筆記，因此我乾脆開一個 github 放我的每日上課練習。會包括一些前期很簡單很基礎的內容，也當作給我的複習吧！
+  一開始朋友分享這個上課資訊，我看到課程內容很感興趣，我想學更深入的 JavaScript、jQuery、React、網頁後端等等，所以就報名了。今天（6/30）老師希望我們做小網站當作筆記，因此我乾脆開一個 github 放我的每日上課練習。
 
 首頁請看：[Alice's notes | frond-end Class](https://alice-nor.github.io/front-endEnginnerClass-season3/index.html)
 
 ![image](https://github.com/Alice-nor/front-endEnginnerClass-season3/blob/main/img/indexPic.png)
 
-統整我閱讀到的，關於 PHP 之推薦閱讀網站 - 
-
-官方網站：[PHP: Hypertext Preprocessor](https://www.php.net/) 、 [寫給朋友的 PHP 從 0 到 100 實戰教程](https://ithelp.ithome.com.tw/users/20107394/ironman/1332) 
 
 月份 | 日期 | Demo | 簡要內容
 ---- |---- |---- |----
@@ -34,3 +31,23 @@
 07  | 27  | [PHP Network database](https://alice-nor.github.io/front-endEnginnerClass-season3/0727%20-%20PHP%20Network%20database/index.html)     | MySQL、PHP 與後端資料庫連接，學習 sql 語法....
 07  | 28  | [Web front-end development](https://alice-nor.github.io/front-endEnginnerClass-season3/0727%20-%20PHP%20Network%20database/index.html)     | React 增刪改查、使用 cookie、連接資料庫
 
+
+統整一點推薦閱讀的網站或使用到的資源 - 
+
+主題 | 網站 | 內容 
+---- |---- |----
+node.js  |     | 
+     | [node.js](https://nodejs.org/en/)  |  node.js 官方網站
+     | [Node.js 教程](https://www.runoob.com/nodejs/nodejs-tutorial.html)  |  Runoob.com node.js 教學網站（簡體）
+     | [Node.JS - 30 天入門學習筆記](https://ithelp.ithome.com.tw/users/20103526/ironman/1081)  |  2017 iT 邦幫忙鐵人賽文章
+---- |---- |----
+PHP  |     | 
+     | [PHP: Hypertext Preprocessor](https://www.php.net/)  |  PHP 官方網站
+     | [Jollen's PHP 教學專欄](https://www.jollen.org/php/)  |
+---- |---- |----
+Material-ui  |     | 
+     | [MATERIAL-UI](https://material-ui.com/)  |  React component 套件
+---- |---- |----
+React  |     | 
+     | [React](https://zh-hant.reactjs.org/)  |  React 官網網站（中文版）
+     | 待補充......  |  

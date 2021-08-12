@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>File upload:</h3>
+    <form action="http://127.0.0.1:8081/all_upload" method="post" enctype="multipart/form-data">
+        <p>select MAIN file to upload:</p>
+        <input type="file" name="main" size="50">
+
+        <p>select multiple sub file to upload:</p>
+        <input type="file" name="sub" size="50" multiple>
+
+        <p>user:</p>
+        <input type="text" name="user">
+        <input type="submit" value="upload all">
+    </form>
+
+
+</body>
+
+</html>

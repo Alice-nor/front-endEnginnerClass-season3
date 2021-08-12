@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>File upload:</h3>
+    <p>Select a file to upload</p>
+
+    <form action="http://127.0.0.1:8081/file_upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" size="50">
+        <input type="submit" value="upload file">
+    </form>
+
+    <!-- 選多張圖片 -->
+    <p>Select multiple files to upload</p>
+    <form action="http://127.0.0.1:8081/multi_upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" size="50" multiple>
+        <input type="submit" value="upload file">
+    </form>
+</body>
+
+</html>

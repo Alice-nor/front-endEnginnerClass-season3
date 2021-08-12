@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表單，資料內容會使用 post 傳遞到 php -->
+    <form action="Ch8_4_3.php" name="login" method="post">
+        名稱： <input type="text" name="User" size="15"><br>
+        密碼： <input type="password" name="Pass" size="15"><br>
+        地址： <textarea name="Address" rows="5" cols="50"></textarea><br>
+
+        <!-- 隱藏欄位，告訴後端這邊為 member 的表單 -->
+        <input type="hidden" name="Type" value="Member"> 
+        <input type="submit" value="註冊使用者">
+    </form>
+</body>
+</html>

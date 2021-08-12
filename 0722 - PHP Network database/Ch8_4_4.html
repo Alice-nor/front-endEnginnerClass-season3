@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="Ch8_4_4.php" method="post" name="info">
+        性別：
+        <input type="radio" name="Gender" value="male" checked="true">男
+        <input type="radio" name="Gender" value="female">女<br>
+
+        電腦系統
+        <select name="Computer">
+            <option value="PC" selected="true">PC</option>
+            <option value="MAC">MAC</option>
+        </select>
+
+        瀏覽器：
+        <input type="checkbox" name="GC" checked="true">Chrome
+        <input type="checkbox" name="SF">Safaro
+        <input type="checkbox" name="FF">Firebox<br>
+
+        推薦網站：<br>
+        <select name="Webs[]" size="4" multiple="True">
+            <option value="w1" selected="true">Yahoo!</option>
+            <option value="w2">Pchome</option>
+            <option value="w3">Hinet</option>
+            <option value="w4">Google</option>
+        </select>
+
+        <input type="submit" value="送出">
+    </form>
+</body>
+</html>
